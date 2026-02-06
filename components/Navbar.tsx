@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
         <Link to="/" className="flex items-center space-x-2 group">
         {/* <Link to="/" className="flex items-center group"> */}
           <img 
-            src={"/data/images/logo2_xyone.png"} 
+            src={"/images/logo2_xyone.png"} 
             alt="XYone Therapeutics" 
             className="h-12 w-auto object-contain transition-transform group-hover:scale-105"
             onError={(e) => {

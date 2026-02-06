@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-8">
             <img 
-            src={"/data/images/logo2_xyone.png"} 
+            src={"/images/logo2_xyone.png"} 
             alt="XYone Therapeutics" 
             className="h-12 w-auto object-contain transition-transform group-hover:scale-105"
             onError={(e) => {
