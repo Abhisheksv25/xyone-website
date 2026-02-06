@@ -2,42 +2,42 @@ export const leadership = [
   {
     name: "Anshu Goyal",
     title: "Cofounder & CEO",
-    image: "/images/Anshu_XYone.jpg"
+    image: "/images/anshu_xyone.jpg"
   },
   {
     name: "Dr. Ravi Jasuja",
     title: "Cofounder & Chief Scientific Officer",
-    image: "/images/Ravi_XYone.png"
+    image: "/images/ravi_xyone.png"
   },
   {
     name: "Dr. Surender Kharbanda",
     title: "Chief Operating Officer",
-    image: "/images/Surendar_XYone.png"
+    image: "/images/surendar_xyone.png"
   },
   {
     name: "Dr. Shalender Bhasin",
     title: "Cofounder & Head, Scientific Advisory Board",
-    image: "/images/Shalender_XYone.png"
+    image: "/images/shalender_xyone.png"
   },
   {
     name: "Govind Panchamoorthy",
     title: "VP, Immuno Oncology",
-    image: "/images/Govind_XYone.png"
+    image: "/images/govind_xyone.png"
   },
   {
     name: "Brian Lawney",
     title: "Director of Computational Science",
-    image: "/images/Brian_XYone.png"
+    image: "/images/brian_Xyone.png"
   },
   {
     name: "Dylan Bulesco",
     title: "Chief Commercialization Officer",
-    image: "/images/Dylan_XYone.png"
+    image: "/images/dylan_xyone.png"
   },
   {
     name: "Sam Mawn Mahlau",
     title: "Corporate Counsel",
-    image: "/images/Sam_XYone.png"
+    image: "/images/sam_xyone.png"
   }
 ];
 

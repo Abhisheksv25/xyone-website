@@ -1,13 +1,13 @@
 import React from 'react';
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Science from './pages/Science';
-import Pipeline from './pages/Pipeline';
-import Contact from './pages/Contact';
-import News from './pages/News';
+import Navbar from './components/components/Navbar';
+import Footer from './components/components/Footer';
+import Home from './pages/pages/Home';
+import About from './pages/pages/About';
+import Science from './pages/pages/Science';
+import Pipeline from './pages/pages/Pipeline';
+import Contact from './pages/pages/Contact';
+import News from './pages/pages/News';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();

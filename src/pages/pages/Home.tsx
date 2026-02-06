@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, Activity, Dna, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { leadership } from '../data/team';
+import { leadership } from '../../data/data/team';
 
 const Home: React.FC = () => {
   return (

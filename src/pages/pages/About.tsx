@@ -1,6 +1,6 @@
 import React from 'react';
 import { Users, Building2, GraduationCap, Briefcase } from 'lucide-react';
-import { leadership, directors, advisors } from '../data/team';
+import { leadership, directors, advisors } from '../../data/data/team';
 
 const About: React.FC = () => {
   return (
