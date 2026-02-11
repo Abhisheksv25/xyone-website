@@ -15,10 +15,10 @@ const About: React.FC = () => {
          <div className="grid md:grid-cols-12 gap-12">
             <div className="md:col-span-8">
                 <p className="text-xl text-gray-600 leading-relaxed font-light mb-6">
-                    XYone Therapeutics is a biotech startup developing drugs and diagnostic solutions to address significant unmet medical needs in endocrine dysregulation and immuno-oncology.
+                    Every year, approximately 1.2 million people in the U.S. are diagnosed with MUC1-positive solid tumors, including lung, ovarian, breast, gastric, and colorectal cancers. The National Cancer Institute has ranked MUC1 as one of the most important cancer antigen. Today we are targeting MUC1-C, the permanently membrane-bound domain that acts as a central oncogenic driver across the majority of solid tumors. By focusing on this stable and functionally essential target, we are working to unlock new pathways for durable cancer therapies and more precise diagnostic solutions.
                 </p>
                 <p className="text-lg text-gray-500 leading-relaxed">
-                    Founded by Harvard Medical School faculty and led by executives and advisors with deep scientific, pharma, and finance experience, XYone is advancing a platform-driven pipeline designed to translate rigorous biology into therapies with meaningful patient impact.
+                    Founded in 2021, XYone has transformed 20 years of research into a clinical-stage platform validated by leading institutions. With two programs entering trials in 2026, we're backed by institutions that wants to address critical unmet needs in immuno-oncology
                 </p>
             </div>
          </div>

@@ -65,7 +65,7 @@ const Home: React.FC = () => {
                   <div className="flex flex-wrap gap-2">
                     <div className="px-2.5 py-1.5 bg-white/10 border border-white/10 rounded-md text-[11px] font-semibold text-white/90">NCI Partnership</div>
                     <div className="px-2.5 py-1.5 bg-white/10 border border-white/10 rounded-md text-[11px] font-semibold text-white/90">Harvard Medical</div>
-                    <div className="px-2.5 py-1.5 bg-white/10 border border-white/10 rounded-md text-[11px] font-semibold text-white/90">Clinical Trial Sites</div>
+                    <div className="px-2.5 py-1.5 bg-white/10 border border-white/10 rounded-md text-[11px] font-semibold text-white/90">Roche/Poseida Partnership</div>
                   </div>
                 </div>
                 
