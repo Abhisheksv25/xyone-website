@@ -16,16 +16,16 @@ export const leadership = [
     title: "Chief Operating Officer",
     image: "/images/surendar_xyone.png",
     bio: "A serial oncology entrepreneur and former faculty at Dana-Farber Cancer Institute."
-  }
-];
-
-export const scientificTeam = [
+  },
   {
     name: "Dr. Shalender Bhasin",
     title: "Scientific Advisor & Co-founder",
     image: "/images/shalender_xyone.png",
     bio: "A faculty member at Harvard Medical School."
-  },
+  }
+];
+
+export const scientificTeam = [
   {
     name: "Dr. Stephen Monks",
     title: "Advisor CDMO & CMC",
