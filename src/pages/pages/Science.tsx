@@ -5,7 +5,7 @@ const Science: React.FC = () => {
   return (
     <div className="bg-background-light">
       {/* Hero Section */}
-      <header className="pt-40 pb-20 px-6 max-w-7xl mx-auto">
+      <header className="pt-32 pb-12 px-6 max-w-7xl mx-auto">
          <span className="inline-block px-3 py-1 rounded-sm bg-primary/10 text-primary text-base font-bold tracking-widest uppercase mb-6">Our Science</span>
          <h1 className="font-serif text-5xl md:text-7xl mb-8 leading-tight text-navy-900">
             Precision Oncology & <br/> <span className="italic text-primary">Endocrine Innovation</span>.
@@ -16,7 +16,7 @@ const Science: React.FC = () => {
       </header>
 
       {/* MUC1-C Platform Section */}
-      <section className="py-24 bg-white border-t border-gray-100">
+      <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6">
             <div className="grid lg:grid-cols-12 gap-16">
                 <div className="lg:col-span-5">
@@ -68,7 +68,7 @@ const Science: React.FC = () => {
       </section>
 
       {/* ADC Engineering */}
-      <section className="py-20 bg-navy-900 text-white">
+      <section className="py-16 bg-navy-900 text-white">
         <div className="max-w-7xl mx-auto px-6 text-center mb-16">
             <h2 className="font-serif text-3xl md:text-4xl mb-6">Next-Generation ADC Engineering</h2>
             <p className="max-w-3xl mx-auto text-gray-300 text-lg leading-relaxed">
@@ -101,7 +101,7 @@ const Science: React.FC = () => {
       </section>
 
       {/* Preclinical Validation */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
          <div className="max-w-7xl mx-auto px-6">
             <div className="border-l-4 border-primary pl-8 py-2 mb-12">
                 <h2 className="font-serif text-3xl text-navy-900 mb-2">Preclinical Validation</h2>
@@ -131,7 +131,7 @@ const Science: React.FC = () => {
       </section>
 
       {/* Endocrinology */}
-      <section className="py-24 bg-gray-50 border-t border-gray-200">
+      <section className="py-16 bg-gray-50 border-t border-gray-200">
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
               <div>
                   <h2 className="text-xs font-bold uppercase tracking-widest text-primary mb-4">Endocrinology</h2>
@@ -170,7 +170,7 @@ const Science: React.FC = () => {
       </section>
 
       {/* Collaborations */}
-      <section className="py-20 bg-white border-t border-gray-200">
+      <section className="py-16 bg-white border-t border-gray-200">
           <div className="max-w-7xl mx-auto px-6 text-center">
               <h2 className="font-serif text-3xl text-navy-900 mb-12">Scientific Collaborations & Validation</h2>
               

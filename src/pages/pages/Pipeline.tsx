@@ -62,20 +62,19 @@ const Pipeline: React.FC = () => {
 
   return (
     <div className="bg-background-light">
-      <header className="py-24 bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6">
-          <h1 className="font-serif text-5xl md:text-6xl mb-6 text-navy-900">Therapeutic Pipeline</h1>
-          <p className="max-w-3xl text-xl text-gray-600 leading-relaxed mb-8">
-            XYone Therapeutics is advancing a multi-asset pipeline built around a proprietary MUC1-C targeting platform in oncology, alongside development-stage programs supporting personalized hormone therapies and precision drug delivery.
-          </p>
-          <p className="text-gray-500 max-w-3xl">
-            Our pipeline is designed to generate meaningful clinical catalysts starting in 2026, while expanding platform potential across multiple high-unmet-need indications.
-          </p>
-        </div>
+      <header className="pt-32 pb-12 px-6 max-w-7xl mx-auto">
+        <span className="inline-block px-3 py-1 rounded-sm bg-primary/10 text-primary text-base font-bold tracking-widest uppercase mb-6">Our Pipeline</span>
+        <h1 className="font-serif text-5xl md:text-7xl mb-6 leading-tight text-navy-900">Therapeutic Pipeline</h1>
+        <p className="max-w-3xl text-xl text-gray-600 leading-relaxed mb-8">
+          XYone Therapeutics is advancing a multi-asset pipeline built around a proprietary MUC1-C targeting platform in oncology, alongside development-stage programs supporting personalized hormone therapies and precision drug delivery.
+        </p>
+        <p className="text-gray-500 max-w-3xl">
+          Our pipeline is designed to generate meaningful clinical catalysts starting in 2026, while expanding platform potential across multiple high-unmet-need indications.
+        </p>
       </header>
 
       {/* Filters */}
-      <section className="py-8 bg-white border-b border-gray-200 sticky top-20 z-40 shadow-sm">
+      <section className="py-6 bg-gray-50 border-b border-gray-200 sticky top-20 z-40 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 flex flex-wrap gap-4 items-center justify-between">
           <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0">
             {['All Programs', 'Oncology', 'Endocrinology'].map((f) => (
@@ -100,7 +99,7 @@ const Pipeline: React.FC = () => {
       </section>
 
       {/* Pipeline Chart */}
-      <main className="py-16 max-w-7xl mx-auto px-6">
+      <main className="py-12 max-w-7xl mx-auto px-6">
         {/* Header Row */}
         <div className="hidden md:grid grid-cols-12 mb-6 px-6 text-xs font-black uppercase tracking-wider text-black border-b border-gray-200 pb-4">
             <div className="col-span-2">Program</div>
@@ -124,7 +123,7 @@ const Pipeline: React.FC = () => {
         </div>
 
         {/* Partnering CTA */}
-        <div className="mt-24 p-12 bg-navy-900 rounded-2xl text-center text-white relative overflow-hidden">
+        <div className="mt-16 p-12 bg-navy-900 rounded-2xl text-center text-white relative overflow-hidden">
             <div className="relative z-10">
                 <h2 className="text-3xl font-serif mb-6">Partnering for the future of Medicine</h2>
                 <p className="max-w-xl mx-auto mb-8 text-gray-300 text-lg">
@@ -162,12 +161,12 @@ const PipelineRow: React.FC<PipelineRowProps> = ({ id, modality, area, target, p
     const [expanded, setExpanded] = useState(false);
     
     return (
-        <div className="bg-white border border-gray-200 rounded-lg group hover:border-primary/30 transition-all shadow-sm overflow-hidden">
+        <div className="bg-gray-50 border border-gray-200 rounded-lg group hover:border-primary/30 transition-all shadow-sm overflow-hidden">
              {/* Main Row */}
-            <div className="grid grid-cols-1 md:grid-cols-12 cursor-pointer transition-colors hover:bg-gray-50 items-center min-h-[100px]" onClick={() => setExpanded(!expanded)}>
+            <div className="grid grid-cols-1 md:grid-cols-12 cursor-pointer transition-colors hover:bg-gray-100 items-center min-h-[100px]" onClick={() => setExpanded(!expanded)}>
                 
                 {/* Program Col */}
-                <div className="col-span-1 md:col-span-2 flex flex-col justify-center p-6 border-r border-transparent md:border-gray-50">
+                <div className="col-span-1 md:col-span-2 flex flex-col justify-center p-6 border-r border-transparent md:border-gray-200">
                     <div className="flex items-center gap-2 mb-2">
                          {isPartnered && <span className="text-[9px] px-1.5 py-0.5 rounded bg-gray-100 text-gray-500 uppercase font-black">Partnered</span>}
                          {isNCI && <span className="text-[9px] px-1.5 py-0.5 rounded bg-blue-50 text-blue-600 uppercase font-black">NCI-Led</span>}
@@ -177,7 +176,7 @@ const PipelineRow: React.FC<PipelineRowProps> = ({ id, modality, area, target, p
                 </div>
                 
                 {/* Indication Col */}
-                <div className="col-span-1 md:col-span-3 flex flex-col justify-center p-6 md:pl-0 border-r border-transparent md:border-gray-50">
+                <div className="col-span-1 md:col-span-3 flex flex-col justify-center p-6 md:pl-0 border-r border-transparent md:border-gray-200">
                     <span className="text-[10px] font-bold text-primary uppercase tracking-widest mb-1">{area}</span>
                     <p className="text-sm font-medium text-gray-700 leading-tight">{target}</p>
                 </div>
@@ -217,7 +216,7 @@ const PipelineRow: React.FC<PipelineRowProps> = ({ id, modality, area, target, p
 
             {/* Details Panel */}
             {expanded && (
-                <div className="px-6 pb-6 bg-gray-50 border-t border-gray-100 animate-fade-in">
+                <div className="px-6 pb-6 bg-gray-100 border-t border-gray-200 animate-fade-in">
                     <div className="grid md:grid-cols-2 gap-8 pt-6">
                         <div>
                             <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Mechanism of Action</h4>

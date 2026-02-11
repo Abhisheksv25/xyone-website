@@ -7,50 +7,80 @@ const Home: React.FC = () => {
   return (
     <div className="bg-background-light">
       {/* Hero Section */}
-      <section className="relative pt-40 pb-24 md:pt-56 md:pb-40 overflow-hidden">
-        {/* Geometric Motif Background */}
-        <div className="absolute inset-0 pointer-events-none opacity-[0.03]" 
-             style={{
-                 backgroundImage: 'radial-gradient(#CA2128 1px, transparent 1px)',
-                 backgroundSize: '32px 32px'
-             }}>
-        </div>
-
+      <section className="relative pt-24 pb-12 md:pt-32 md:pb-16 overflow-hidden bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-8">
-              <span className="inline-block px-3 py-1 rounded-sm bg-primary/10 text-primary text-base font-bold tracking-widest uppercase mb-6">
-                XYone Therapeutics
-              </span>
-              <h1 className="font-serif text-5xl md:text-7xl font-medium leading-[1.1] mb-8 text-navy-900">
-                Solving Key Challenges in <span className="text-primary italic">Immuno-Oncology</span> and <span className="text-primary italic">Endocrine Dysregulation</span>.
+          <div className="grid lg:grid-cols-12 gap-8 md:gap-12 items-center">
+            {/* Left Column */}
+            <div className="lg:col-span-7">
+              <h1 className="font-serif text-5xl md:text-7xl leading-tight text-navy-900 mb-6">
+                Solving what the industry got wrong about <span className="text-primary italic">MUC1</span>
               </h1>
-              <p className="text-lg md:text-xl text-gray-600 max-w-xl mb-10 leading-relaxed">
-                We are dedicated to develop innovative drugs and diagnostic solutions that address critical unmet needs in immuno-oncology and endocrine dysregulation.
+              
+              <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-2xl text-justify">
+                Every previous MUC1 program targeted the shedding N-domain, leading to variable responses and limited efficacy. XYone targets MUC1-C, the non-shedding oncogenic driver present across 80% of solid tumors. Our validated platform outperforms leading competitors in head-to-head studies and enters human trials in 2026 with two distinct ADC candidates.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Link to="/science" className="bg-primary text-white px-8 py-4 font-medium flex items-center group rounded-sm shadow-md hover:bg-red-700 transition-all">
-                  Explore Our Technology
-                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-                </Link>
-                <Link to="/pipeline" className="border border-navy-900 text-navy-900 px-8 py-4 font-medium hover:bg-navy-900 hover:text-white transition-all rounded-sm">
-                  View Pipeline
+              
+              <Link to="/science" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-lg font-semibold text-lg hover:bg-red-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 group">
+                Explore the Science
+                <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
+              </Link>
+            </div>
+
+            {/* Right Column - Clinical Card */}
+            <div className="lg:col-span-5 relative">
+              <div className="bg-gradient-to-br from-navy-900 to-black rounded-3xl p-6 md:p-8 shadow-2xl border border-white/10 relative overflow-hidden">
+                {/* Top Border Gradient */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-red-400"></div>
+                
+                <div className="text-xs font-bold tracking-[0.15em] uppercase text-white/50 mb-4">Entering Clinical Trials</div>
+                
+                <h2 className="font-sans text-5xl font-bold text-white mb-6 leading-none">
+                  2026
+                </h2>
+                
+                <div className="space-y-6 mb-8">
+                  {/* Asset 1 */}
+                  <div className="relative pl-6">
+                    <div className="absolute left-0 top-2 bottom-0 w-1 bg-gradient-to-b from-red-400 to-transparent rounded-full"></div>
+                    <div className="text-xl font-bold text-red-400 mb-1">XYA02</div>
+                    <div className="text-sm font-semibold text-white/90 mb-1">Phase 1 • Summer 2026</div>
+                    <div className="text-sm text-white/60">
+                        NSCLC, Ovarian, Gastric, Colorectal
+                    </div>
+                  </div>
+                  
+                  {/* Asset 2 */}
+                  <div className="relative pl-6">
+                    <div className="absolute left-0 top-2 bottom-0 w-1 bg-gradient-to-b from-red-400 to-transparent rounded-full"></div>
+                    <div className="text-xl font-bold text-red-400 mb-1">XYA01</div>
+                    <div className="text-sm font-semibold text-white/90 mb-1">Phase 1 • Late 2026</div>
+                    <div className="text-sm text-white/60">
+                        Triple-Negative & Metastatic Breast Cancer
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="pt-6 border-t border-white/10 mb-6">
+                  <div className="text-[10px] font-bold tracking-widest uppercase text-white/50 mb-3">Validated By</div>
+                  <div className="flex flex-wrap gap-2">
+                    <div className="px-2.5 py-1.5 bg-white/10 border border-white/10 rounded-md text-[11px] font-semibold text-white/90">NCI Partnership</div>
+                    <div className="px-2.5 py-1.5 bg-white/10 border border-white/10 rounded-md text-[11px] font-semibold text-white/90">Harvard Medical</div>
+                    <div className="px-2.5 py-1.5 bg-white/10 border border-white/10 rounded-md text-[11px] font-semibold text-white/90">Clinical Trial Sites</div>
+                  </div>
+                </div>
+                
+                <Link to="/pipeline" className="flex items-center justify-center gap-3 w-full py-3.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all backdrop-blur-sm group">
+                  View Full Pipeline
+                  <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
                 </Link>
               </div>
-            </div>
-            <div className="lg:col-span-4 relative hidden lg:block">
-               {/* Abstract visual */}
-               <div className="relative w-full aspect-[4/5] bg-gradient-to-tr from-navy-900 to-navy-800 rounded-lg overflow-hidden shadow-2xl flex items-center justify-center">
-                  <div className="absolute inset-0 opacity-20" style={{backgroundImage: 'radial-gradient(circle at center, white 1px, transparent 1px)', backgroundSize: '20px 20px'}}></div>
-                  <Dna size={120} className="text-white/10" />
-               </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Focus Areas (Formerly Features) */}
-      <section className="py-24 bg-white border-t border-gray-100">
+      <section className="py-16 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16">
             <h2 className="text-xs uppercase tracking-[0.3em] font-bold text-primary mb-4">Our Focus Areas</h2>
@@ -90,7 +120,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Pipeline Section */}
-      <section className="py-24 bg-gray-50 border-t border-gray-200">
+      <section className="py-16 bg-gray-50 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="border-l-4 border-primary pl-6 mb-16">
             <h2 className="font-serif text-4xl font-bold mb-2 text-navy-900">Therapeutic Pipeline</h2>
@@ -177,7 +207,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Leadership Section */}
-      <section className="py-20 bg-white border-t border-gray-200">
+      <section className="py-16 bg-white border-t border-gray-200">
           <div className="max-w-7xl mx-auto px-6">
              <div className="flex justify-between items-end mb-12">
                  <h2 className="font-serif text-3xl text-navy-900">Our Team</h2>
@@ -220,7 +250,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Latest News & Publications */}
-      <section className="py-24 bg-gray-50 border-t border-gray-200">
+      <section className="py-16 bg-gray-50 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-end mb-12">
              <div>
@@ -289,7 +319,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 relative overflow-hidden bg-primary text-white">
+      <section className="py-24 relative overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 bg-gradient-to-br from-primary to-red-800"></div>
         <div className="absolute top-0 right-0 w-2/3 h-full opacity-10 transform translate-x-1/4">
             <svg viewBox="0 0 200 200" className="w-full h-full text-white fill-current">

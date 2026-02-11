@@ -39,8 +39,8 @@ const News: React.FC = () => {
 
   return (
     <div className="bg-background-light min-h-screen">
-      <header className="pt-32 pb-16 px-6 max-w-7xl mx-auto border-b border-gray-200">
-         <span className="inline-block px-3 py-1 rounded-sm bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6">Updates</span>
+      <header className="pt-32 pb-12 px-6 max-w-7xl mx-auto border-b border-gray-200">
+         <span className="inline-block px-3 py-1 rounded-sm bg-primary/10 text-primary text-base font-bold tracking-widest uppercase mb-6">Updates</span>
          <h1 className="font-serif text-5xl md:text-7xl mb-6 leading-tight text-navy-900">
             News & <span className="italic text-primary">Presentations</span>
          </h1>
@@ -49,10 +49,10 @@ const News: React.FC = () => {
          </p>
       </header>
 
-      <div className="max-w-5xl mx-auto px-6 py-12">
+      <div className="max-w-5xl mx-auto px-6 py-8">
         
         {/* Featured Item */}
-        <div className="mb-12">
+        <div className="mb-8">
             <h2 className="text-xs font-bold uppercase tracking-widest text-primary mb-6 flex items-center gap-2">
                 <Star size={14} className="fill-primary" /> Featured Presentation
             </h2>

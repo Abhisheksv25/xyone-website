@@ -1,93 +1,71 @@
 export const leadership = [
   {
     name: "Anshu Goyal",
-    title: "Cofounder & CEO",
-    image: "/images/anshu_xyone.jpg"
+    title: "CEO & Co-founder",
+    image: "/images/anshu_xyone.jpg",
+    bio: "Brings over 25 years of experience as an investor, entrepreneur, and hedge fund manager."
   },
   {
     name: "Dr. Ravi Jasuja",
-    title: "Cofounder & Chief Scientific Officer",
-    image: "/images/ravi_xyone.png"
+    title: "CSO & Co-founder",
+    image: "/images/ravi_xyone.png",
+    bio: "A faculty member at Harvard Medical School."
   },
   {
     name: "Dr. Surender Kharbanda",
     title: "Chief Operating Officer",
-    image: "/images/surendar_xyone.png"
-  },
-  {
-    name: "Dr. Shalender Bhasin",
-    title: "Cofounder & Head, Scientific Advisory Board",
-    image: "/images/shalender_xyone.png"
-  },
-  {
-    name: "Govind Panchamoorthy",
-    title: "VP, Immuno Oncology",
-    image: "/images/govind_xyone.png"
-  },
-  {
-    name: "Brian Lawney",
-    title: "Director of Computational Science",
-    image: "/images/brian_Xyone.png"
-  },
-  {
-    name: "Dylan Bulesco",
-    title: "Chief Commercialization Officer",
-    image: "/images/dylan_xyone.png"
-  },
-  {
-    name: "Sam Mawn Mahlau",
-    title: "Corporate Counsel",
-    image: "/images/sam_xyone.png"
+    image: "/images/surendar_xyone.png",
+    bio: "A serial oncology entrepreneur and former faculty at Dana-Farber Cancer Institute."
   }
 ];
 
-export const directors = [
-    "Anshu Goyal", 
-    "Dr. Ravi Jasuja", 
-    "Nick Pontikes", 
-    "Walter McLallen", 
-    "Ashu Garg"
+export const scientificTeam = [
+  {
+    name: "Dr. Shalender Bhasin",
+    title: "Scientific Advisor & Co-founder",
+    image: "/images/shalender_xyone.png",
+    bio: "A faculty member at Harvard Medical School."
+  },
+  {
+    name: "Dr. Stephen Monks",
+    title: "Advisor CDMO & CMC",
+    image: "/images/stephen_xyone.png",
+    bio: "Possesses over 25 years of experience in manufacturing complex biologics and ADCs at companies like Pyxis and Aura."
+  },
+  {
+    name: "Patrick Zweidler-McKay",
+    title: "Clinical Strategy",
+    image: "/images/zweidler_xyone.png",
+    bio: "Previously served as Executive Medical Director at Abbvie and ImmunoGen, and Deputy Chair of Pediatric Oncology at MD Anderson."
+  }
 ];
 
-export const advisors = [
-    {
-        name: "Dr. Adrian Dobs",
-        title: "MD; Director, Johns Hopkins Clinical Research Network; Professor, Johns Hopkins School of Medicine"
-    },
-    {
-        name: "Dr. Ronald Swerdloff",
-        title: "Chief, Division of Endocrinology; Professor of Medicine, David Geffen School of Medicine at UCLA"
-    },
-    {
-        name: "Dr. Neeraj Agarwal",
-        title: "Professor & Presidential Endowed Chair of Cancer Research, Huntsman Cancer Institute / University of Utah"
-    },
-    {
-        name: "Dr. Ravi Chari",
-        title: "CSO, Full Life Technologies; former VP Chemistry & Biochemistry, ImmunoGen"
-    },
-    {
-        name: "Dr. Rakesh Dixit",
-        title: "President & CEO, Bionavigen; former senior safety leadership at MedImmune and AstraZeneca"
-    },
-    {
-        name: "Dr. David Weaver",
-        title: "Former CSO (FemtoDx and DNAR); former VP at Verastem Oncology; former faculty at CBR Institute for Biomedical Research"
-    },
-    {
-        name: "Dr. Anne Cappola",
-        title: "MD, ScM; Professor, University of Pennsylvania"
-    },
-    {
-        name: "Dr. Manu Jaggi",
-        title: "COO, Dabur Research Foundation & Althea Lifesciences"
-    },
-     {
-        name: "Dr. Joe Arena",
-        title: "Regulatory Advisor"
-    },
-     {
-        name: "Dr. Eric Rubin",
-        title: "Drug Development Advisor"
-    }
+export const strategicAdvisors = [
+  {
+    name: "Jill DeSimone",
+    title: "Strategic Advisor",
+    image: "/images/jill_xyone.png",
+    bio: "Former President of US Oncology at Merck, where she led a business grow from $500 million to $9 billion in revenue."
+  },
+  {
+    name: "Dr. Tarak Mody",
+    title: "Bus & Dev Strategic Advisor",
+    image: "/images/tarak_xyone.png",
+    bio: "Currently at Innovotex; former CBO at PICI and VP of Business Development & Licensing at Five Prime Therapeutics (now Amgen)."
+  },
+  {
+    name: "Dr. Eric Rubin",
+    title: "Drug Dev Advisor",
+    image: "/images/rubin_xyone.png",
+    bio: "Senior VP at Merck who led the global oncology therapeutic team and the development of Keytruda."
+  },
+  {
+    name: "Dr. Joe Arena",
+    title: "Regulatory Advisor",
+    image: "/images/joe_xyone.png",
+    bio: "Former VP Oncology Regulatory Lead at Pfizer and VP Global Regulatory Strategies for Oncology and Immunology at Merck."
+  }
 ];
+
+export const directors = [];
+export const advisors = [];
