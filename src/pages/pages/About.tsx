@@ -7,7 +7,7 @@ const About: React.FC = () => {
 
   return (
     <div className="bg-background-light">
-      <header className="pt-32 pb-12 px-6 max-w-7xl mx-auto">
+      <header className="pt-24 pb-8 px-6 max-w-7xl mx-auto">
          <span className="inline-block px-3 py-1 rounded-sm bg-primary/10 text-primary text-base font-bold tracking-widest uppercase mb-6">About XYone</span>
          <h1 className="font-serif text-5xl md:text-7xl mb-8 leading-tight text-navy-900">
             Translating rigorous biology into <span className="italic text-primary">patient impact.</span>
@@ -25,7 +25,7 @@ const About: React.FC = () => {
       </header>
 
       {/* Strategic Focus - Cleaner Layout */}
-      <section className="py-16 bg-white border-y border-gray-200">
+      <section className="py-12 bg-white border-y border-gray-200">
           <div className="max-w-7xl mx-auto px-6">
               <div className="grid md:grid-cols-2 gap-16">
                   <div className="relative pl-8 border-l-2 border-primary/20">
@@ -45,7 +45,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Leadership Team */}
-      <section className="py-16 bg-background-light">
+      <section className="py-12 bg-background-light">
           <div className="max-w-7xl mx-auto px-6">
               <h2 className="font-serif text-4xl text-navy-900 mb-12 text-center">Leadership Team</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
@@ -62,7 +62,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Strategic & Regulatory Advisors */}
-      <section className="py-16 bg-white border-t border-gray-200">
+      <section className="py-12 bg-white border-t border-gray-200">
           <div className="max-w-7xl mx-auto px-6">
               <h2 className="font-serif text-4xl text-navy-900 mb-12 text-center">Strategic & Regulatory Advisors</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

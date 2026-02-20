@@ -62,7 +62,7 @@ const Pipeline: React.FC = () => {
 
   return (
     <div className="bg-background-light">
-      <header className="pt-32 pb-12 px-6 max-w-7xl mx-auto">
+      <header className="pt-24 pb-8 px-6 max-w-7xl mx-auto">
         <span className="inline-block px-3 py-1 rounded-sm bg-primary/10 text-primary text-base font-bold tracking-widest uppercase mb-6">Our Pipeline</span>
         <h1 className="font-serif text-5xl md:text-7xl mb-6 leading-tight text-navy-900">Therapeutic Pipeline</h1>
         <p className="max-w-3xl text-xl text-gray-600 leading-relaxed mb-8">
@@ -74,7 +74,7 @@ const Pipeline: React.FC = () => {
       </header>
 
       {/* Filters */}
-      <section className="py-6 bg-gray-50 border-b border-gray-200 sticky top-20 z-40 shadow-sm">
+      <section className="py-4 bg-gray-50 border-b border-gray-200 sticky top-20 z-40 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 flex flex-wrap gap-4 items-center justify-between">
           <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0">
             {['All Programs', 'Oncology', 'Endocrinology'].map((f) => (
@@ -99,7 +99,7 @@ const Pipeline: React.FC = () => {
       </section>
 
       {/* Pipeline Chart */}
-      <main className="py-12 max-w-7xl mx-auto px-6">
+      <main className="py-8 max-w-7xl mx-auto px-6">
         {/* Header Row */}
         <div className="hidden md:grid grid-cols-12 mb-6 px-6 text-xs font-black uppercase tracking-wider text-black border-b border-gray-200 pb-4">
             <div className="col-span-2">Program</div>
@@ -123,7 +123,7 @@ const Pipeline: React.FC = () => {
         </div>
 
         {/* Partnering CTA */}
-        <div className="mt-16 p-12 bg-navy-900 rounded-2xl text-center text-white relative overflow-hidden">
+        <div className="mt-12 p-12 bg-navy-900 rounded-2xl text-center text-white relative overflow-hidden">
             <div className="relative z-10">
                 <h2 className="text-3xl font-serif mb-6">Partnering for the future of Medicine</h2>
                 <p className="max-w-xl mx-auto mb-8 text-gray-300 text-lg">

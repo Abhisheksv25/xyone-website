@@ -7,16 +7,16 @@ const Home: React.FC = () => {
   return (
     <div className="bg-background-light">
       {/* Hero Section */}
-      <section className="relative pt-24 pb-12 md:pt-32 md:pb-16 overflow-hidden bg-gradient-to-b from-white to-gray-50">
+      <section className="relative pt-14 pb-6 md:pt-24 md:pb-10 overflow-hidden bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-12 gap-8 md:gap-12 items-center">
             {/* Left Column */}
             <div className="lg:col-span-7">
-              <h1 className="font-serif text-5xl md:text-7xl leading-tight text-navy-900 mb-6">
+              <h1 className="font-serif text-3xl md:text-5xl leading-tight text-navy-900 mb-4">
                 Solving what the industry got wrong about <span className="text-primary italic">MUC1</span>
               </h1>
               
-              <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-2xl text-justify">
+              <p className="text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl text-justify">
                 Every previous MUC1 program targeted the shedding N-domain, leading to variable responses and limited efficacy. XYone targets MUC1-C, the non-shedding oncogenic driver present across 80% of solid tumors. Our validated platform outperforms leading competitors in head-to-head studies and enters human trials in 2026 with two distinct ADC candidates.
               </p>
               
@@ -80,9 +80,9 @@ const Home: React.FC = () => {
       </section>
 
       {/* Focus Areas (Formerly Features) */}
-      <section className="py-16 bg-white border-t border-gray-100">
+      <section className="py-12 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-16">
+          <div className="mb-10">
             <h2 className="text-xs uppercase tracking-[0.3em] font-bold text-primary mb-4">Our Focus Areas</h2>
             <h3 className="font-serif text-4xl font-medium text-navy-900">Two Pillars of Innovation</h3>
           </div>
@@ -120,9 +120,9 @@ const Home: React.FC = () => {
       </section>
 
       {/* Pipeline Section */}
-      <section className="py-16 bg-gray-50 border-t border-gray-200">
+      <section className="py-12 bg-gray-50 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="border-l-4 border-primary pl-6 mb-16">
+          <div className="border-l-4 border-primary pl-6 mb-10">
             <h2 className="font-serif text-4xl font-bold mb-2 text-navy-900">Therapeutic Pipeline</h2>
             <p className="text-gray-600">Advancing a robust portfolio of first-in-class therapies.</p>
           </div>
@@ -207,9 +207,9 @@ const Home: React.FC = () => {
       </section>
 
       {/* Leadership Section */}
-      <section className="py-16 bg-white border-t border-gray-200">
+      <section className="py-12 bg-white border-t border-gray-200">
           <div className="max-w-7xl mx-auto px-6">
-             <div className="flex justify-between items-end mb-12">
+             <div className="flex justify-between items-end mb-8">
                  <h2 className="font-serif text-3xl text-navy-900">Our Team</h2>
                  <Link to="/about" className="hidden md:inline-flex items-center text-primary text-sm font-bold uppercase tracking-widest hover:underline">
                     View All <ArrowRight size={14} className="ml-2"/>
@@ -250,9 +250,9 @@ const Home: React.FC = () => {
       </section>
 
       {/* Latest News & Publications */}
-      <section className="py-16 bg-gray-50 border-t border-gray-200">
+      <section className="py-12 bg-gray-50 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex justify-between items-end mb-12">
+          <div className="flex justify-between items-end mb-8">
              <div>
                 <h2 className="font-serif text-3xl text-navy-900 mb-2">Publications</h2>
                 <p className="text-gray-500">Key research validating our approach.</p>
@@ -319,7 +319,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden bg-primary text-white">
+      <section className="py-16 relative overflow-hidden bg-primary text-white">
         <div className="absolute inset-0 bg-gradient-to-br from-primary to-red-800"></div>
         <div className="absolute top-0 right-0 w-2/3 h-full opacity-10 transform translate-x-1/4">
             <svg viewBox="0 0 200 200" className="w-full h-full text-white fill-current">

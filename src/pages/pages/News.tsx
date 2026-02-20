@@ -39,7 +39,7 @@ const News: React.FC = () => {
 
   return (
     <div className="bg-background-light min-h-screen">
-      <header className="pt-32 pb-12 px-6 max-w-7xl mx-auto border-b border-gray-200">
+      <header className="pt-24 pb-8 px-6 max-w-7xl mx-auto border-b border-gray-200">
          <span className="inline-block px-3 py-1 rounded-sm bg-primary/10 text-primary text-base font-bold tracking-widest uppercase mb-6">Updates</span>
          <h1 className="font-serif text-5xl md:text-7xl mb-6 leading-tight text-navy-900">
             News & <span className="italic text-primary">Presentations</span>
