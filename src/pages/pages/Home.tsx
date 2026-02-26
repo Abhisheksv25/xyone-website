@@ -1,9 +1,30 @@
 import React from 'react';
-import { ArrowRight, Activity, Dna, FileText } from 'lucide-react';
+import { ArrowRight, Activity, Dna, FileText, Target, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { leadership } from '../../data/data/team';
 
 const Home: React.FC = () => {
+  const pipelineData = [
+    {
+      id: "XYA02",
+      modality: "ADC (Exatecan/Topo1)",
+      area: "Oncology (MUC1-C)",
+      progress: 55,
+    },
+    {
+      id: "XYA01",
+      modality: "ADC (MMAE)",
+      area: "Oncology (MUC1-C)",
+      progress: 45,
+    },
+    {
+      id: "XY017-Exa",
+      modality: "ADC (Exatecan / Topoisomerase I)",
+      area: "Oncology (MUC1-C)",
+      progress: 20,
+    },
+  ];
+
   return (
     <div className="bg-background-light">
       {/* Hero Section */}
@@ -12,16 +33,19 @@ const Home: React.FC = () => {
           <div className="grid lg:grid-cols-12 gap-8 md:gap-12 items-center">
             {/* Left Column */}
             <div className="lg:col-span-7">
-              <h1 className="font-serif text-3xl md:text-5xl leading-tight text-navy-900 mb-4">
-                Solving what the industry got wrong about <span className="text-primary italic">MUC1</span>
+              <h1 className="font-serif text-3xl md:text-5xl leading-tight text-navy-900 mb-2">
+                We Solved What the Industry Got Wrong About <span className="text-primary italic">MUC1</span>
               </h1>
+              <p className="text-base text-gray-500 italic mb-6 font-medium">
+                Precision Targeting of MUC1-C to Unlock Durable Solid Tumor Suppression
+              </p>
               
               <p className="text-lg text-gray-600 leading-relaxed mb-6 max-w-2xl text-justify">
-                Every previous MUC1 program targeted the shedding N-domain, leading to variable responses and limited efficacy. XYone targets MUC1-C, the non-shedding oncogenic driver present across 80% of solid tumors. Our validated platform outperforms leading competitors in head-to-head studies and enters human trials in 2026 with two distinct ADC candidates.
+                XYone’s platform is built on a fundamental insight: prior MUC1 therapies failed because they targeted the shedding MUC1-N domain. We are building a first-in-class therapeutics selectively targeting MUC1-C, the non-shedding, membrane-anchored oncogenic driver present across ~80% of solid tumors. This avoids serum sink, enabling improved therapeutic index and durable tumor elimination, unlocking a differentiated path to solid tumor control.
               </p>
               
               <Link to="/science" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-lg font-semibold text-lg hover:bg-red-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 group">
-                Explore the Science
+                Explore our Platform
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
               </Link>
             </div>
@@ -84,35 +108,49 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-10">
             <h2 className="text-xs uppercase tracking-[0.3em] font-bold text-primary mb-4">Our Focus Areas</h2>
-            <h3 className="font-serif text-4xl font-medium text-navy-900">Two Pillars of Innovation</h3>
+            <h3 className="font-serif text-4xl font-medium text-navy-900">Strategic Pillars</h3>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Oncology Block */}
-            <div className="group p-10 border border-gray-100 bg-gray-50 rounded-lg hover:border-primary/50 hover:shadow-lg transition-all duration-300 flex flex-col">
-              <div className="mb-8 w-16 h-16 flex items-center justify-center bg-white shadow-sm rounded-md text-navy-900 group-hover:text-primary transition-colors">
-                <Dna strokeWidth={1.5} size={32} />
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* MUC1-C Oncology Platform */}
+            <div className="group p-8 border border-gray-100 bg-gray-50 rounded-lg hover:border-primary/50 hover:shadow-lg transition-all duration-300 flex flex-col">
+              <div className="mb-6 w-14 h-14 flex items-center justify-center bg-white shadow-sm rounded-md text-navy-900 group-hover:text-primary transition-colors">
+                <Target strokeWidth={1.5} size={28} />
               </div>
-              <h4 className="font-serif text-3xl font-medium mb-4 text-navy-900">XYone Oncology</h4>
-              <p className="text-gray-600 leading-relaxed mb-8 flex-grow">
-                Focused on discovering and advancing first-in-class agents against the MUC1-C oncoprotein.
+              <h4 className="font-serif text-2xl font-medium mb-4 text-navy-900">MUC1-C Oncology Platform</h4>
+              <p className="text-gray-600 leading-relaxed mb-6 flex-grow text-sm text-justify">
+                Our platform is built on precision biology: selectively targeting the membrane-retained MUC1-C subunit that drives oncogenic signaling. By avoiding the shed extracellular domain, we eliminate antigen sink and improve tumor selectivity. This enables higher effective dosing, broader applicability across epithelial cancers, and a scalable solid tumor opportunity.
               </p>
-              <Link to="/science" className="inline-flex items-center text-primary font-bold uppercase tracking-widest text-sm hover:underline">
-                Our Approach <ArrowRight size={16} className="ml-2" />
+              <Link to="/science" className="inline-flex items-center text-primary font-bold uppercase tracking-widest text-xs hover:underline">
+                Our Approach <ArrowRight size={14} className="ml-2" />
               </Link>
             </div>
             
-            {/* Endocrinology Block */}
-            <div className="group p-10 border border-gray-100 bg-gray-50 rounded-lg hover:border-primary/50 hover:shadow-lg transition-all duration-300 flex flex-col">
-              <div className="mb-8 w-16 h-16 flex items-center justify-center bg-white shadow-sm rounded-md text-navy-900 group-hover:text-primary transition-colors">
-                <Activity strokeWidth={1.5} size={32} />
+            {/* Next-Generation ADC Engineering */}
+            <div className="group p-8 border border-gray-100 bg-gray-50 rounded-lg hover:border-primary/50 hover:shadow-lg transition-all duration-300 flex flex-col">
+              <div className="mb-6 w-14 h-14 flex items-center justify-center bg-white shadow-sm rounded-md text-navy-900 group-hover:text-primary transition-colors">
+                <Zap strokeWidth={1.5} size={28} />
               </div>
-              <h4 className="font-serif text-3xl font-medium mb-4 text-navy-900">XYone Endocrinology</h4>
-              <p className="text-gray-600 leading-relaxed mb-8 flex-grow">
-                Focused on new diagnostics and formulations that improve how hormonal imbalances (including hypogonadism, hypothyroidism, and hypoandrogenism) are measured and treated in collaboration with research partners.
+              <h4 className="font-serif text-2xl font-medium mb-4 text-navy-900">Next-Generation ADC Engineering</h4>
+              <p className="text-gray-600 leading-relaxed mb-6 flex-grow text-sm text-justify">
+                We design antibody–drug conjugates with plasma stability, controlled intracellular release, and optimized drug-to-antibody ratios. Rather than relying solely on payload potency, we engineer around target biology to expand therapeutic index. Our approach integrates target selection, antibody specificity, and payload architecture into a unified strategy.
               </p>
-              <Link to="/science" className="inline-flex items-center text-primary font-bold uppercase tracking-widest text-sm hover:underline">
-                Our Approach <ArrowRight size={16} className="ml-2" />
+              <Link to="/science" className="inline-flex items-center text-primary font-bold uppercase tracking-widest text-xs hover:underline">
+                Our Approach <ArrowRight size={14} className="ml-2" />
+              </Link>
+            </div>
+
+            {/* Translational Endocrinology */}
+            <div className="group p-8 border border-gray-100 bg-gray-50 rounded-lg hover:border-primary/50 hover:shadow-lg transition-all duration-300 flex flex-col">
+              <div className="mb-6 w-14 h-14 flex items-center justify-center bg-white shadow-sm rounded-md text-navy-900 group-hover:text-primary transition-colors">
+                <Activity strokeWidth={1.5} size={28} />
+              </div>
+              <h4 className="font-serif text-2xl font-medium mb-4 text-navy-900">Translational Endocrinology</h4>
+              <p className="text-gray-600 leading-relaxed mb-6 flex-grow text-sm text-justify">
+                Beyond oncology, XYone applies structural and protein-binding expertise to endocrine biology. By refining how bioavailable hormones are measured and interpreted, we aim to improve diagnostic precision and therapeutic decision-making. This creates long-term optionality and platform depth beyond our oncology franchise.
+              </p>
+              <Link to="/science" className="inline-flex items-center text-primary font-bold uppercase tracking-widest text-xs hover:underline">
+                Our Approach <ArrowRight size={14} className="ml-2" />
               </Link>
             </div>
           </div>
@@ -140,67 +178,31 @@ const Home: React.FC = () => {
               </div>
             </div>
             
-            {/* Row 1 - XYA02 */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 p-6 items-center hover:bg-gray-50 transition-colors border-b border-gray-100">
-              <div className="md:col-span-3">
-                  <div className="font-bold text-navy-900">XYA02</div>
-                  <div className="text-xs text-gray-500 mt-1">ADC (Exatecan/Topo1)</div>
-              </div>
-              <div className="md:col-span-3 text-gray-700 font-medium">Oncology (MUC1-C)</div>
-              <div className="md:col-span-6 relative h-4 mt-2 md:mt-0">
-                <div className="absolute inset-0 grid grid-cols-4 gap-1 h-full w-full pointer-events-none">
-                    <div className="border-r border-gray-100 last:border-0 h-full"></div>
-                    <div className="border-r border-gray-100 last:border-0 h-full"></div>
-                    <div className="border-r border-gray-100 last:border-0 h-full"></div>
-                    <div className="border-r border-gray-100 last:border-0 h-full"></div>
+            {pipelineData.map((item, index) => (
+              <div key={item.id} className={`grid grid-cols-1 md:grid-cols-12 gap-4 p-6 items-center hover:bg-gray-50 transition-colors ${index < pipelineData.length - 1 ? 'border-b border-gray-100' : ''}`}>
+                <div className="md:col-span-3">
+                    <div className="font-bold text-navy-900">{item.id}</div>
+                    <div className="text-xs text-gray-500 mt-1">{item.modality}</div>
                 </div>
-                {/* 55% Progress - Approaching Phase 1 */}
-                <div className="absolute top-1/2 -translate-y-1/2 h-2 bg-gray-100 rounded-full w-full overflow-hidden">
-                    <div className="h-full bg-primary w-[55%]"></div>
+                <div className="md:col-span-3 text-gray-700 font-medium">{item.area}</div>
+                <div className="md:col-span-6 relative h-4 mt-2 md:mt-0">
+                  <div className="absolute inset-0 grid grid-cols-4 gap-1 h-full w-full pointer-events-none">
+                      <div className="border-r border-gray-100 last:border-0 h-full"></div>
+                      <div className="border-r border-gray-100 last:border-0 h-full"></div>
+                      <div className="border-r border-gray-100 last:border-0 h-full"></div>
+                      <div className="border-r border-gray-100 last:border-0 h-full"></div>
+                  </div>
+                  <div className="absolute top-1/2 -translate-y-1/2 h-2 bg-gray-100 rounded-full w-full overflow-hidden">
+                      <div className="h-full bg-primary" style={{ width: `${item.progress}%` }}></div>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
 
-            {/* Row 2 - XYA01 */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 p-6 items-center hover:bg-gray-50 transition-colors border-b border-gray-100">
-              <div className="md:col-span-3">
-                  <div className="font-bold text-navy-900">XYA01</div>
-                  <div className="text-xs text-gray-500 mt-1">ADC (MMAE)</div>
-              </div>
-              <div className="md:col-span-3 text-gray-700 font-medium">Oncology (MUC1-C)</div>
-              <div className="md:col-span-6 relative h-4 mt-2 md:mt-0">
-                <div className="absolute inset-0 grid grid-cols-4 gap-1 h-full w-full pointer-events-none">
-                    <div className="border-r border-gray-100 last:border-0 h-full"></div>
-                    <div className="border-r border-gray-100 last:border-0 h-full"></div>
-                    <div className="border-r border-gray-100 last:border-0 h-full"></div>
-                    <div className="border-r border-gray-100 last:border-0 h-full"></div>
-                </div>
-                {/* 45% Progress - IND Enabling */}
-                <div className="absolute top-1/2 -translate-y-1/2 h-2 bg-gray-100 rounded-full w-full overflow-hidden">
-                    <div className="h-full bg-primary w-[45%]"></div>
-                </div>
-              </div>
-            </div>
-
-             {/* Row 3 - Endocrine Platform */}
-             <div className="grid grid-cols-1 md:grid-cols-12 gap-4 p-6 items-center hover:bg-gray-50 transition-colors">
-              <div className="md:col-span-3">
-                  <div className="font-bold text-navy-900">Endocrine Platform</div>
-                  <div className="text-xs text-gray-500 mt-1">Nano/Microparticle</div>
-              </div>
-              <div className="md:col-span-3 text-gray-700 font-medium">Hormonal Regulation</div>
-              <div className="md:col-span-6 relative h-4 mt-2 md:mt-0">
-                <div className="absolute inset-0 grid grid-cols-4 gap-1 h-full w-full pointer-events-none">
-                    <div className="border-r border-gray-100 last:border-0 h-full"></div>
-                    <div className="border-r border-gray-100 last:border-0 h-full"></div>
-                    <div className="border-r border-gray-100 last:border-0 h-full"></div>
-                    <div className="border-r border-gray-100 last:border-0 h-full"></div>
-                </div>
-                {/* 30% Progress - Pre-clinical */}
-                <div className="absolute top-1/2 -translate-y-1/2 h-2 bg-gray-100 rounded-full w-full overflow-hidden">
-                    <div className="h-full bg-primary w-[30%]"></div>
-                </div>
-              </div>
+            <div className="p-6 text-center border-t border-gray-100 bg-gray-50/50">
+              <Link to="/pipeline" className="inline-flex items-center text-primary font-bold uppercase tracking-widest text-sm hover:underline">
+                View Full Pipeline <ArrowRight size={16} className="ml-2" />
+              </Link>
             </div>
           </div>
         </div>

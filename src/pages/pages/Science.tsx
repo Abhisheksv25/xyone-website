@@ -11,7 +11,7 @@ const Science: React.FC = () => {
             Precision Oncology & <br/> <span className="italic text-primary">Endocrine Innovation</span>.
          </h1>
          <p className="text-xl text-gray-600 max-w-3xl leading-relaxed font-light">
-            XYone Therapeutics is building first-in-class programs translating deep target biology, engineered delivery systems, and rigorous preclinical validation into therapies designed for meaningful patient impact.
+            XYone Therapeutics is building first-in-class therapeutics targeting MUC1-C, the non-shedding oncogenic driver present across ~80% of solid tumors, translating mechanisms-grounded innovation into durable tumor control.
          </p>
       </header>
 
@@ -22,25 +22,25 @@ const Science: React.FC = () => {
                 <div className="lg:col-span-5">
                     <h2 className="text-lg font-bold uppercase tracking-widest text-primary mb-4">Oncology Platform</h2>
                     <h3 className="font-serif text-4xl text-navy-900 mb-8">Why MUC1-C?</h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                        MUC1 is a clinically important cancer antigen and a compelling, tumor-cell–specific target across many solid tumors. While MUC1-N is continuously shed into circulation creating an antigen "sink", <strong>MUC1-C remains permanently cell-associated</strong>.
+                    <p className="text-gray-600 mb-6 leading-relaxed text-justify">
+                        MUC1-C is a membrane-retained oncogenic driver broadly expressed across epithelial cancers. While the MUC1-N domain is continuously shed into circulation, creating antigen sink and limiting tumor exposure. MUC1-C remains permanently cell-associated. Prior programs targeting MUC1-N encountered serum sequestration, limited tumor delivery, and constrained efficacy.
                     </p>
-                    <p className="text-gray-600 leading-relaxed">
-                        Our approach targets the oncogenic, non-shedding MUC1-C subunit. This avoids the sequestration issues of MUC1-N and bypasses glycosylation heterogeneity, enabling uniform binding and a predictable ADC strategy.
+                    <p className="text-gray-600 leading-relaxed text-justify">
+                        XYone selectively targets MUC1-C, avoiding these failures entirely. Clinical experience with MUC1-C-directed CAR-T therapy further supports target safety, with no on-target off-tumor toxicities observed, substantially de-risking the antigen.
                     </p>
                 </div>
                 
                 {/* Diagrammatic representation using CSS/HTML structures */}
-                <div className="lg:col-span-7 bg-gray-50 rounded-2xl p-8 border border-gray-100">
-                    <h4 className="font-serif text-xl mb-8 text-center text-navy-900">The MUC1-C Advantage</h4>
-                    <div className="grid md:grid-cols-2 gap-8">
+                <div className="lg:col-span-7 bg-gray-50 rounded-2xl p-8 border border-gray-100 h-full flex flex-col">
+                    <h4 className="font-serif text-3xl mb-8 text-center text-navy-900">The MUC1-C Advantage</h4>
+                    <div className="grid md:grid-cols-2 gap-8 flex-grow">
                         {/* MUC1-N Limitation - RED THEME */}
-                        <div className="bg-red-50 p-6 rounded-lg border border-red-100 relative overflow-hidden">
+                        <div className="bg-red-50 p-6 rounded-lg border border-red-100 relative overflow-hidden flex flex-col justify-center">
                              <div className="absolute top-0 right-0 bg-red-100 text-red-800 text-[10px] font-bold px-2 py-1 uppercase">Standard Approach</div>
                              <div className="h-12 w-12 bg-white/50 rounded-full flex items-center justify-center mb-4 mx-auto">
                                 <Target className="text-red-400" size={24}/>
                              </div>
-                             <h5 className="font-bold text-center mb-2 text-red-900">Targeting MUC1-N</h5>
+                             <h5 className="font-bold text-center mb-4 text-red-900">Targeting MUC1-N</h5>
                              <ul className="text-sm space-y-2 text-red-800">
                                 <li className="flex items-start gap-2"><span className="text-red-600 text-xs">✕</span> High shedding rate</li>
                                 <li className="flex items-start gap-2"><span className="text-red-600 text-xs">✕</span> Antigen "sink" effect</li>
@@ -49,12 +49,12 @@ const Science: React.FC = () => {
                         </div>
 
                         {/* MUC1-C Advantage - GREEN THEME */}
-                        <div className="bg-emerald-50 p-6 rounded-lg border-2 border-emerald-500/20 shadow-lg relative overflow-hidden transform md:-translate-y-4">
+                        <div className="bg-emerald-50 p-6 rounded-lg border-2 border-emerald-500/20 shadow-lg relative overflow-hidden flex flex-col justify-center">
                              <div className="absolute top-0 right-0 bg-emerald-600 text-white text-[10px] font-bold px-2 py-1 uppercase">XYone Approach</div>
                              <div className="h-12 w-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4 mx-auto">
                                 <Target className="text-emerald-600" size={24}/>
                              </div>
-                             <h5 className="font-bold text-center mb-2 text-emerald-900">Targeting MUC1-C</h5>
+                             <h5 className="font-bold text-center mb-4 text-emerald-900">Targeting MUC1-C</h5>
                              <ul className="text-sm space-y-2 text-emerald-900">
                                 <li className="flex items-start gap-2"><span className="text-emerald-600 text-xs">✓</span> Non-shedding domain</li>
                                 <li className="flex items-start gap-2"><span className="text-emerald-600 text-xs">✓</span> Stable membrane retention</li>
@@ -76,7 +76,18 @@ const Science: React.FC = () => {
             </p>
         </div>
         
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <AssetCard 
+                title="XY017-Exa" 
+                subtitle="MUC1-C–DIRECTED ADC · EXATECAN (TOPO1)"
+                description="Targeting high-proliferation epithelial tumors via replication stress amplification."
+                tags={['DAR 4', 'Exatecan Payload']}
+                features={[
+                    "Converts baseline genomic instability into irreversible clonogenic collapse",
+                    "No on-target off-tumor toxicities in MUC1-C CAR-T experience",
+                    "Sustained tumor growth inhibition in preclinical models"
+                ]}
+            />
             <AssetCard 
                 title="XYA02" 
                 subtitle="Exatecan (Topo1) ADC"
@@ -100,13 +111,43 @@ const Science: React.FC = () => {
         </div>
       </section>
 
+      {/* Why XY017-Exa Works */}
+      <section className="py-16 bg-navy-900 text-white border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-6">
+            <h2 className="font-serif text-3xl md:text-4xl mb-12 text-center">Why XY017-Exa Works: The Science Behind the Strategy</h2>
+            
+            <div className="grid md:grid-cols-3 gap-12">
+                <div>
+                    <h3 className="text-lg font-bold text-primary mb-4 uppercase tracking-wider">Payload Mechanism: Replication Stress Conversion</h3>
+                    <p className="text-gray-300 leading-relaxed text-justify">
+                        Exatecan induces replication-associated DNA strand breaks that overwhelm ATR/CHK1-mediated repair in rapidly proliferating tumors. The result is replication fork collapse and irreversible loss of clonogenic survival. This mechanism aligns with high-growth epithelial malignancies and supports broad indication expansion.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-lg font-bold text-primary mb-4 uppercase tracking-wider">Translational Implications</h3>
+                    <p className="text-gray-300 leading-relaxed text-justify">
+                        Preclinical data demonstrate sustained tumor growth inhibition consistent with durable cytotoxicity. With antigen safety established, development risk centers on optimized ADC pharmacology rather than target liability. The program supports biomarker-driven enrichment based on MUC1 expression and replication stress signatures.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-lg font-bold text-primary mb-4 uppercase tracking-wider">Scalable MUC1-C Franchise</h3>
+                    <p className="text-gray-300 leading-relaxed text-justify">
+                        XY017-Exa combines validated target biology with a clinically established payload class and optimized linker design. The differentiation lies in correct antigen selection, enabling a scalable MUC1-C franchise across high-prevalence solid tumors.
+                    </p>
+                </div>
+            </div>
+        </div>
+      </section>
+
       {/* Preclinical Validation */}
       <section className="py-12 bg-white">
          <div className="max-w-7xl mx-auto px-6">
             <div className="border-l-4 border-primary pl-8 py-2 mb-12">
                 <h2 className="font-serif text-3xl text-navy-900 mb-2">Preclinical Validation</h2>
                 <p className="text-gray-600 max-w-2xl">
-                    In head-to-head comparisons across extensive in vitro and CDX/PDX datasets, XYone reports superior performance for its MUC1-C ADC approach versus MUC1-N targeting analogs.
+                    In head-to-head comparisons across extensive in vitro and CDX/PDX datasets, XYone reports superior performance for its MUC1-C ADC approach. XY017-Exa preclinical data demonstrate sustained tumor growth inhibition consistent with durable cytotoxicity.
                 </p>
             </div>
             
@@ -191,8 +232,9 @@ const Science: React.FC = () => {
   );
 };
 
-const AssetCard: React.FC<{title: string, subtitle: string, description: string, tags: string[], features: string[]}> = ({title, subtitle, description, tags, features}) => (
-    <div className="bg-navy-800 rounded-xl p-8 text-left border border-white/10 hover:border-primary/50 transition-all group">
+const AssetCard: React.FC<{title: string, subtitle: string, description: string, tags: string[], features: string[]}> = ({title, subtitle, description, tags, features}) => {
+    return (
+    <div className="bg-navy-800 rounded-xl p-8 text-left border border-white/10 hover:border-primary/50 transition-all group flex flex-col h-full">
         <div className="flex justify-between items-start mb-6">
             <div>
                 <h3 className="text-3xl font-serif text-white mb-1 group-hover:text-primary transition-colors">{title}</h3>
@@ -203,7 +245,7 @@ const AssetCard: React.FC<{title: string, subtitle: string, description: string,
             </div>
         </div>
         
-        <p className="text-gray-300 mb-6 leading-relaxed h-20">
+        <p className="text-gray-300 mb-6 leading-relaxed min-h-[5rem]">
             {description}
         </p>
         
@@ -215,7 +257,7 @@ const AssetCard: React.FC<{title: string, subtitle: string, description: string,
             ))}
         </div>
         
-        <div className="border-t border-white/10 pt-6">
+        <div className="border-t border-white/10 pt-6 mt-auto">
             <h4 className="text-xs font-bold uppercase text-gray-500 mb-3">Key Highlights</h4>
             <ul className="space-y-2">
                 {features.map((feat, i) => (
@@ -227,6 +269,7 @@ const AssetCard: React.FC<{title: string, subtitle: string, description: string,
             </ul>
         </div>
     </div>
-)
+    );
+}
 
 export default Science;

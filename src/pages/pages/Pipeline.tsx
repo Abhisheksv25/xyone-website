@@ -27,6 +27,16 @@ const Pipeline: React.FC = () => {
         description: "NCI-Led Clinical Program (NExT). Phase 1 initiating late 2026. Pre-IND package submitted Jan 2026. Initial indications: Metastatic Breast Cancer (HR+/HER2-) and TNBC."
       },
       {
+        id: "XY017-Exa",
+        modality: "ADC (Exatecan / Topoisomerase I)",
+        area: "Oncology",
+        target: "MUC1-C",
+        progress: 20,
+        isPartnered: false,
+        mechanism: "Next-generation MUC1-C–directed ADC engineered to amplify intrinsic replication stress in high-proliferation epithelial tumors. By selectively delivering a Topoisomerase I inhibitor to MUC1-C–expressing cells, XY017-Exa converts baseline genomic instability into irreversible replication fork collapse and durable clonogenic cell death.",
+        description: "MUC1-C–directed ADC designed to amplify replication stress in high-proliferation epithelial tumors. By delivering an Exatecan payload, XY017-Exa overwhelms ATR/CHK1-mediated repair, driving irreversible replication fork collapse and durable tumor cell death. Differentiated by selective targeting of membrane-retained MUC1-C, avoiding antigen sink associated with shed MUC1-N. Biomarker strategy focuses on MUC1 expression and replication stress signatures."
+      },
+      {
         id: "P-MUC1C-ALLO1",
         modality: "CAR-T",
         area: "Oncology",
