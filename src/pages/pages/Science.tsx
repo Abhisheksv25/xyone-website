@@ -1,7 +1,43 @@
-import React from 'react';
-import { Target, Zap, Shield, Activity, ArrowRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Target, Zap, Shield, Activity, ArrowRight, X } from 'lucide-react';
 
 const Science: React.FC = () => {
+  const [selectedPoster, setSelectedPoster] = useState<{
+      id: number;
+      badge: string;
+      title: string;
+      authors: string;
+      image: string;
+      year: string;
+  } | null>(null);
+
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') setSelectedPoster(null);
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, []);
+
+  const posters = [
+    {
+      id: 1,
+      badge: "ESMO 2025",
+      title: "Novel MUC1-C-ADC Exhibits Remarkable Anti-Tumor Potency in the Treatment of Triple Negative Breast Cancer (TNBC)",
+      authors: "Kharbanda S, Raina D, Ahmad R, Panchamoorthy G, Jasuja R",
+      image: "/images/ESMO_2025.png",
+      year: "2025"
+    },
+    {
+      id: 2,
+      badge: "ESMO 2024",
+      title: "MUC1-C Directed ADC — Preclinical Validation in Solid Tumors",
+      authors: "Kharbanda S, et al. — XYone Therapeutics / Brigham & Women's Hospital",
+      image: "/images/ESMO_2024.png",
+      year: "2024"
+    }
+  ];
+
   return (
     <div className="bg-background-light">
       {/* Hero Section */}
@@ -130,6 +166,51 @@ const Science: React.FC = () => {
         </div>
       </section>
 
+      {/* Scientific Presentations */}
+      <section className="py-16 bg-white px-6 border-b border-gray-100">
+        <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+                <h2 className="font-serif text-4xl text-primary">Poster Presentations</h2>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                {posters.map((poster) => (
+                    <div 
+                        key={poster.id} 
+                        className="group bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer flex flex-col overflow-hidden hover:-translate-y-1"
+                        onClick={() => setSelectedPoster(poster)}
+                    >
+                        <div className="aspect-[16/10] relative overflow-hidden bg-gray-100">
+                            <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-primary text-xs font-bold px-3 py-1.5 rounded-md uppercase tracking-wider z-10 shadow-sm">
+                                {poster.badge}
+                            </div>
+                            <img src={poster.image} alt={poster.title} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+                            <div className="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/10 transition-colors duration-300" />
+                        </div>
+                        <div className="p-8 flex flex-col flex-grow">
+                            <div className="flex items-center gap-2 mb-4">
+                                <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                <span className="text-xs text-gray-400 font-bold uppercase tracking-widest">ESMO • {poster.year}</span>
+                            </div>
+                            <h3 className="font-serif text-2xl text-navy-900 mb-4 leading-tight group-hover:text-primary transition-colors">
+                                {poster.title}
+                            </h3>
+                            <p className="text-sm text-gray-500 mb-8 line-clamp-2 leading-relaxed">
+                                {poster.authors}
+                            </p>
+                            <div className="mt-auto pt-6 border-t border-gray-100 flex justify-between items-center">
+                                <span className="text-navy-900 font-bold text-xs uppercase tracking-widest">View Poster</span>
+                                <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                    <ArrowRight size={16} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+      </section>
+
       {/* Preclinical Validation */}
       <section className="py-12 bg-white">
          <div className="max-w-7xl mx-auto px-6">
@@ -217,6 +298,30 @@ const Science: React.FC = () => {
               </div>
           </div>
       </section>
+
+      {/* Poster Modal */}
+      {selectedPoster && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm" onClick={() => setSelectedPoster(null)}>
+            <div className="bg-white rounded-xl max-w-5xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl" onClick={e => e.stopPropagation()}>
+                <button 
+                    onClick={() => setSelectedPoster(null)}
+                    className="absolute top-4 right-4 p-2 bg-white/80 hover:bg-white rounded-full text-navy-900 hover:text-primary transition-colors z-10"
+                >
+                    <X size={24} />
+                </button>
+                <div className="w-full bg-gray-100">
+                    <img src={selectedPoster.image} alt={selectedPoster.title} className="w-full h-auto" />
+                </div>
+                <div className="p-8 border-t border-gray-100">
+                    <div className="inline-block bg-primary text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider mb-4">
+                        {selectedPoster.badge}
+                    </div>
+                    <h3 className="font-serif text-2xl md:text-3xl text-navy-900 mb-4 leading-tight">{selectedPoster.title}</h3>
+                    <p className="text-gray-600 text-sm font-medium">{selectedPoster.authors}</p>
+                </div>
+            </div>
+        </div>
+      )}
     </div>
   );
 };
