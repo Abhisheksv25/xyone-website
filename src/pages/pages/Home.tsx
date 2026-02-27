@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowRight, Activity, Dna, FileText, Target, Zap } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, Activity, Dna, FileText, Target, Zap, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { leadership } from '../../data/data/team';
 
@@ -8,16 +8,21 @@ const Home: React.FC = () => {
     {
       id: "XYA02",
       modality: "ADC (Exatecan/Topo1)",
-      area: "NSCLC, Ovarian, Gastric, Colorectal",
-      progress: 60,
+      therapeuticArea: "Oncology",
+      indications: "NSCLC, Ovarian, Colorectal, Gastric/GEJ",
+      stage: 3,
+      mechanismDescription: "MUC1-C–directed ADC with Exatecan payload (DAR 4; Beta-glucuronide linker). Selectively delivers a Topoisomerase I inhibitor to MUC1-C-expressing tumor cells.",
+      detailsDescription: "Phase 1 initiating Summer 2026. Targeting Non-squamous NSCLC, High-grade serous ovarian, Gastric/GEJ, and Colorectal cancer. Head-to-head superiority demonstrated vs MUC1-N comparator in PDX studies."
     },
     {
       id: "XYA01",
       modality: "ADC (MMAE)",
-      area: "TNBC & Metastatic Breast Cancer",
-      progress: 45,
+      therapeuticArea: "Oncology",
+      indications: "TNBC, Metastatic Breast Cancer (HR+/HER2−)",
+      stage: 2,
+      mechanismDescription: "MUC1-C ADC with MMAE payload (DAR 4; VC linker). NCI-Led Clinical Program (NExT).",
+      detailsDescription: "Phase 1 initiating late 2026. Pre-IND package submitted Jan 2026. Complete tumor suppression shown in breast and lung cancer models."
     },
-  
   ];
 
   return (
@@ -162,37 +167,22 @@ const Home: React.FC = () => {
 
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
             {/* Header Row */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 p-6 border-b border-gray-100 text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">
-              <div className="md:col-span-3">Program</div>
-              <div className="md:col-span-3">Indication</div>
-              <div className="md:col-span-6 grid grid-cols-4 gap-1">
-                 <div className="text-center">Pre-clinical</div>
-                 <div className="text-center">IND-Enabled</div>
-                 <div className="text-center">Phase 1/2</div>
-                 <div className="text-center">Phase 3</div>
-              </div>
+            <div className="hidden md:grid grid-cols-12 gap-4 px-4 py-3 bg-gray-50 border-b border-gray-200 text-xs font-semibold uppercase tracking-widest text-gray-500">
+                <div className="col-span-2 pl-8">Molecule Name</div>
+                <div className="col-span-2">Therapeutic Area</div>
+                <div className="col-span-4">Potential Indications</div>
+                <div className="col-span-2">Status / Stage</div>
+                <div className="col-span-2">Modality</div>
             </div>
             
-            {pipelineData.map((item, index) => (
-              <div key={item.id} className={`grid grid-cols-1 md:grid-cols-12 gap-4 p-6 items-center hover:bg-gray-50 transition-colors ${index < pipelineData.length - 1 ? 'border-b border-gray-100' : ''}`}>
-                <div className="md:col-span-3">
-                    <div className="font-bold text-navy-900">{item.id}</div>
-                    <div className="text-xs text-gray-500 mt-1">{item.modality}</div>
-                </div>
-                <div className="md:col-span-3 text-gray-700 font-medium">{item.area}</div>
-                <div className="md:col-span-6 relative h-4 mt-2 md:mt-0">
-                  <div className="absolute inset-0 grid grid-cols-4 gap-1 h-full w-full pointer-events-none">
-                      <div className="border-r border-gray-100 last:border-0 h-full"></div>
-                      <div className="border-r border-gray-100 last:border-0 h-full"></div>
-                      <div className="border-r border-gray-100 last:border-0 h-full"></div>
-                      <div className="border-r border-gray-100 last:border-0 h-full"></div>
-                  </div>
-                  <div className="absolute top-1/2 -translate-y-1/2 h-2 bg-gray-100 rounded-full w-full overflow-hidden">
-                      <div className="h-full bg-primary" style={{ width: `${item.progress}%` }}></div>
-                  </div>
-                </div>
-              </div>
-            ))}
+            <div className="space-y-0">
+                {pipelineData.map((row) => (
+                    <PipelineRow 
+                        key={row.id}
+                        data={row}
+                    />
+                ))}
+            </div>
 
             <div className="p-6 text-center border-t border-gray-100 bg-gray-50/50">
               <Link to="/pipeline" className="inline-flex items-center text-primary font-bold uppercase tracking-widest text-sm hover:underline">
@@ -337,5 +327,68 @@ const Home: React.FC = () => {
     </div>
   );
 };
+
+interface PipelineRowProps {
+    data: {
+        id: string;
+        therapeuticArea: string;
+        indications: string;
+        stage: number;
+        modality: string;
+        mechanismDescription: string;
+        detailsDescription: string;
+        isPartnered?: boolean;
+    }
+}
+
+const PipelineRow: React.FC<PipelineRowProps> = ({ data }) => {
+    const [expanded, setExpanded] = useState(false);
+    
+    return (
+        <div className="border-b border-gray-200 bg-white last:border-0">
+             {/* Main Row */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 px-4 py-6 items-center cursor-pointer hover:bg-gray-50 transition-colors" onClick={() => setExpanded(!expanded)}>
+                
+                {/* Program Col */}
+                <div className="col-span-1 md:col-span-2 flex items-start gap-3">
+                    <ChevronDown className={`text-primary mt-1 transform transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`} size={20} />
+                    <div>
+                        <h3 className="font-serif text-navy-900 text-lg font-bold leading-tight">{data.id}</h3>
+                    </div>
+                </div>
+                
+                <div className="col-span-1 md:col-span-2 text-sm text-gray-700 font-medium">{data.therapeuticArea}</div>
+                <div className="col-span-1 md:col-span-4 text-sm text-gray-700">{data.indications}</div>
+                
+                {/* Timeline Col */}
+                <div className="col-span-1 md:col-span-2">
+                    <div className="flex gap-1">
+                        {[1, 2, 3, 4].map((s) => (
+                            <div key={s} className={`h-2 flex-1 rounded-full ${s <= data.stage ? (data.isPartnered ? 'bg-gray-500' : 'bg-primary') : 'bg-transparent'}`} />
+                        ))}
+                    </div>
+                </div>
+
+                <div className="col-span-1 md:col-span-2 text-sm text-gray-700">{data.modality}</div>
+            </div>
+
+            {/* Details Panel */}
+            {expanded && (
+                <div className="bg-[#f9fafb] px-4 py-8 border-t border-gray-100">
+                    <div className="grid md:grid-cols-2 gap-12 md:pl-8">
+                        <div>
+                            <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Mechanism of Action</h4>
+                            <p className="text-sm text-gray-700 leading-relaxed">{data.mechanismDescription}</p>
+                        </div>
+                         <div>
+                            <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Program Details</h4>
+                            <p className="text-sm text-gray-700 leading-relaxed">{data.detailsDescription}</p>
+                        </div>
+                    </div>
+                </div>
+             )}
+        </div>
+    )
+}
 
 export default Home;
