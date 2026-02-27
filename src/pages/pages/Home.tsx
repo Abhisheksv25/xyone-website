@@ -8,21 +8,16 @@ const Home: React.FC = () => {
     {
       id: "XYA02",
       modality: "ADC (Exatecan/Topo1)",
-      area: "Oncology (MUC1-C)",
-      progress: 55,
+      area: "NSCLC, Ovarian, Gastric, Colorectal",
+      progress: 60,
     },
     {
       id: "XYA01",
       modality: "ADC (MMAE)",
-      area: "Oncology (MUC1-C)",
+      area: "TNBC & Metastatic Breast Cancer",
       progress: 45,
     },
-    {
-      id: "XY017-Exa",
-      modality: "ADC (Exatecan / Topoisomerase I)",
-      area: "Oncology (MUC1-C)",
-      progress: 20,
-    },
+  
   ];
 
   return (
@@ -147,7 +142,7 @@ const Home: React.FC = () => {
               </div>
               <h4 className="font-serif text-2xl font-medium mb-4 text-navy-900">Translational Endocrinology</h4>
               <p className="text-gray-600 leading-relaxed mb-6 flex-grow text-sm text-justify">
-                Beyond oncology, XYone applies structural and protein-binding expertise to endocrine biology. By refining how bioavailable hormones are measured and interpreted, we aim to improve diagnostic precision and therapeutic decision-making. This creates long-term optionality and platform depth beyond our oncology franchise.
+                We extend our platform into endocrine disorders, applying the same structural and delivery engineering principles used in oncology. By combining accurate hormone quantification with programmable release formulations, we move beyond empirical dosing. Starting with testosterone, we aim to correct long-standing pharmacokinetic and diagnostic limitations. Our approach enables personalized, physiology-aligned hormone therapy.
               </p>
               <Link to="/science" className="inline-flex items-center text-primary font-bold uppercase tracking-widest text-xs hover:underline">
                 Our Approach <ArrowRight size={14} className="ml-2" />
@@ -275,9 +270,9 @@ const Home: React.FC = () => {
                    <h3 className="font-serif text-xl font-medium text-navy-900 mb-4 leading-tight">
                      MUC1-C in chronic inflammation and carcinogenesis
                    </h3>
-                   <Link to="/news" className="text-navy-900 text-sm font-bold flex items-center group/link hover:text-primary transition-colors mt-auto pt-4">
+                   <a href="https://academic.oup.com/carcin/article/41/9/1173/5876310" target="_blank" rel="noopener noreferrer" className="text-navy-900 text-sm font-bold flex items-center group/link hover:text-primary transition-colors mt-auto pt-4">
                       Read More <ArrowRight size={14} className="ml-2 group-hover/link:translate-x-1 transition-transform"/>
-                   </Link>
+                   </a>
                 </div>
              </div>
 
@@ -286,14 +281,14 @@ const Home: React.FC = () => {
                 <div className="p-8 flex flex-col flex-grow">
                    <div className="flex items-center gap-2 mb-4">
                       <FileText size={16} className="text-primary" />
-                      <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">JCI Insight • Jun 2020</span>
+                      <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">JCI Insight • Sep 2020</span>
                    </div>
                    <h3 className="font-serif text-xl font-medium text-navy-900 mb-4 leading-tight">
                      MUC1-C drives stemness in colitis to CRC progression
                    </h3>
-                   <Link to="/news" className="text-navy-900 text-sm font-bold flex items-center group/link hover:text-primary transition-colors mt-auto pt-4">
+                   <a href="https://insight.jci.org/articles/view/137112" target="_blank" rel="noopener noreferrer" className="text-navy-900 text-sm font-bold flex items-center group/link hover:text-primary transition-colors mt-auto pt-4">
                       Read More <ArrowRight size={14} className="ml-2 group-hover/link:translate-x-1 transition-transform"/>
-                   </Link>
+                   </a>
                 </div>
              </div>
 
@@ -302,14 +297,14 @@ const Home: React.FC = () => {
                 <div className="p-8 flex flex-col flex-grow">
                    <div className="flex items-center gap-2 mb-4">
                       <FileText size={16} className="text-primary" />
-                      <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">JCI Insight • Jun 2018</span>
+                      <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">Frederick National Lab • Feb 2024</span>
                    </div>
                    <h3 className="font-serif text-xl font-medium text-navy-900 mb-4 leading-tight">
                      Antibody-drug conjugate targeting MUC1-C
                    </h3>
-                   <Link to="/news" className="text-navy-900 text-sm font-bold flex items-center group/link hover:text-primary transition-colors mt-auto pt-4">
+                   <a href="https://frederick.cancer.gov/news/biopharmaceutical-development-program-embarks-new-work-targeted-cancer" target="_blank" rel="noopener noreferrer" className="text-navy-900 text-sm font-bold flex items-center group/link hover:text-primary transition-colors mt-auto pt-4">
                       Read More <ArrowRight size={14} className="ml-2 group-hover/link:translate-x-1 transition-transform"/>
-                   </Link>
+                   </a>
                 </div>
              </div>
           </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Zap, Shield, Activity, Share2, ArrowRight } from 'lucide-react';
+import { Target, Zap, Shield, Activity, ArrowRight } from 'lucide-react';
 
 const Science: React.FC = () => {
   return (
@@ -76,18 +76,7 @@ const Science: React.FC = () => {
             </p>
         </div>
         
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <AssetCard 
-                title="XY017-Exa" 
-                subtitle="MUC1-C–DIRECTED ADC · EXATECAN (TOPO1)"
-                description="Targeting high-proliferation epithelial tumors via replication stress amplification."
-                tags={['DAR 4', 'Exatecan Payload']}
-                features={[
-                    "Converts baseline genomic instability into irreversible clonogenic collapse",
-                    "No on-target off-tumor toxicities in MUC1-C CAR-T experience",
-                    "Sustained tumor growth inhibition in preclinical models"
-                ]}
-            />
+        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8">
             <AssetCard 
                 title="XYA02" 
                 subtitle="Exatecan (Topo1) ADC"
@@ -111,30 +100,30 @@ const Science: React.FC = () => {
         </div>
       </section>
 
-      {/* Why XY017-Exa Works */}
+      {/* Why XYA02 Works */}
       <section className="py-16 bg-navy-900 text-white border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6">
-            <h2 className="font-serif text-3xl md:text-4xl mb-12 text-center">Why XY017-Exa Works: The Science Behind the Strategy</h2>
+            <h2 className="font-serif text-3xl md:text-4xl mb-12 text-center">Why XYA02 Works: The Science Behind the Strategy</h2>
             
             <div className="grid md:grid-cols-3 gap-12">
                 <div>
-                    <h3 className="text-lg font-bold text-primary mb-4 uppercase tracking-wider">Payload Mechanism: Replication Stress Conversion</h3>
+                    <h3 className="text-lg font-bold text-primary mb-4 uppercase tracking-wider min-h-[3.5rem]">Payload Mechanism: Replication Stress Conversion</h3>
                     <p className="text-gray-300 leading-relaxed text-justify">
                         Exatecan induces replication-associated DNA strand breaks that overwhelm ATR/CHK1-mediated repair in rapidly proliferating tumors. The result is replication fork collapse and irreversible loss of clonogenic survival. This mechanism aligns with high-growth epithelial malignancies and supports broad indication expansion.
                     </p>
                 </div>
 
                 <div>
-                    <h3 className="text-lg font-bold text-primary mb-4 uppercase tracking-wider">Translational Implications</h3>
+                    <h3 className="text-lg font-bold text-primary mb-4 uppercase tracking-wider min-h-[3.5rem]">Translational Implications</h3>
                     <p className="text-gray-300 leading-relaxed text-justify">
                         Preclinical data demonstrate sustained tumor growth inhibition consistent with durable cytotoxicity. With antigen safety established, development risk centers on optimized ADC pharmacology rather than target liability. The program supports biomarker-driven enrichment based on MUC1 expression and replication stress signatures.
                     </p>
                 </div>
 
                 <div>
-                    <h3 className="text-lg font-bold text-primary mb-4 uppercase tracking-wider">Scalable MUC1-C Franchise</h3>
+                    <h3 className="text-lg font-bold text-primary mb-4 uppercase tracking-wider min-h-[3.5rem]">Scalable MUC1-C Franchise</h3>
                     <p className="text-gray-300 leading-relaxed text-justify">
-                        XY017-Exa combines validated target biology with a clinically established payload class and optimized linker design. The differentiation lies in correct antigen selection, enabling a scalable MUC1-C franchise across high-prevalence solid tumors.
+                        XYA02 combines validated target biology with a clinically established payload class and optimized linker design. The differentiation lies in correct antigen selection, enabling a scalable MUC1-C franchise across high-prevalence solid tumors.
                     </p>
                 </div>
             </div>
@@ -147,7 +136,7 @@ const Science: React.FC = () => {
             <div className="border-l-4 border-primary pl-8 py-2 mb-12">
                 <h2 className="font-serif text-3xl text-navy-900 mb-2">Preclinical Validation</h2>
                 <p className="text-gray-600 max-w-2xl">
-                    In head-to-head comparisons across extensive in vitro and CDX/PDX datasets, XYone reports superior performance for its MUC1-C ADC approach. XY017-Exa preclinical data demonstrate sustained tumor growth inhibition consistent with durable cytotoxicity.
+                    In head-to-head comparisons across extensive in vitro and CDX/PDX datasets, XYone reports superior performance for its MUC1-C ADC approach. XYA02 preclinical data demonstrate sustained tumor growth inhibition consistent with durable cytotoxicity.
                 </p>
             </div>
             
@@ -239,9 +228,6 @@ const AssetCard: React.FC<{title: string, subtitle: string, description: string,
             <div>
                 <h3 className="text-3xl font-serif text-white mb-1 group-hover:text-primary transition-colors">{title}</h3>
                 <div className="text-sm font-bold text-primary uppercase tracking-wider">{subtitle}</div>
-            </div>
-            <div className="bg-white/10 p-2 rounded-full">
-                <Share2 size={20} className="text-white" />
             </div>
         </div>
         

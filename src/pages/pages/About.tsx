@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, Building2, GraduationCap, Briefcase } from 'lucide-react';
+import { Users, Building2, GraduationCap, Briefcase, Linkedin } from 'lucide-react';
 import { leadership, scientificTeam, strategicAdvisors } from '../../data/data/team';
 
 const About: React.FC = () => {
@@ -13,11 +13,11 @@ const About: React.FC = () => {
             Translating rigorous biology into <span className="italic text-primary">patient impact.</span>
          </h1>
          <div className="grid md:grid-cols-12 gap-12">
-            <div className="md:col-span-8">
-                <p className="text-xl text-gray-600 leading-relaxed font-light mb-6">
+            <div className="md:col-span-10">
+                <p className="text-xl text-gray-600 leading-relaxed font-light mb-6 text-justify">
                     Every year, approximately 1.2 million people in the U.S. are diagnosed with MUC1-positive solid tumors, including lung, ovarian, breast, gastric, and colorectal cancers. The National Cancer Institute has ranked MUC1 as one of the most important cancer antigen. Today we are targeting MUC1-C, the permanently membrane-bound domain that acts as a central oncogenic driver across the majority of solid tumors. By focusing on this stable and functionally essential target, we are working to unlock new pathways for durable cancer therapies and more precise diagnostic solutions.
                 </p>
-                <p className="text-lg text-gray-500 leading-relaxed">
+                <p className="text-lg text-gray-500 leading-relaxed text-justify">
                     Founded in 2021, XYone has transformed 20 years of research into a clinical-stage platform validated by leading institutions. With two programs entering trials in 2026, we're backed by institutions that wants to address critical unmet needs in immuno-oncology
                 </p>
             </div>
@@ -55,6 +55,8 @@ const About: React.FC = () => {
                         name={member.name} 
                         role={member.title} 
                         image={member.image} 
+                        bio={member.bio}
+                        linkedin={member.linkedin}
                       />
                   ))}
               </div>
@@ -72,6 +74,8 @@ const About: React.FC = () => {
                         name={member.name} 
                         role={member.title} 
                         image={member.image} 
+                        bio={member.bio}
+                        linkedin={member.linkedin}
                       />
                   ))}
               </div>
@@ -81,9 +85,9 @@ const About: React.FC = () => {
   );
 };
 
-const TeamMember: React.FC<{name: string, role: string, image: string, bio?: string}> = ({name, role, image, bio}) => (
+const TeamMember: React.FC<{name: string, role: string, image: string, bio?: string, linkedin?: string}> = ({name, role, image, bio, linkedin}) => (
     <div className="group bg-white rounded-lg overflow-hidden border border-gray-100 hover:border-primary/30 hover:shadow-lg transition-all flex flex-col">
-        <div className="h-72 bg-gray-100 relative overflow-hidden flex items-center justify-center">
+        <div className="h-72 bg-gray-100 relative overflow-hidden flex items-center justify-center group/image">
             <img 
                 src={image} 
                 alt={name} 
@@ -97,11 +101,29 @@ const TeamMember: React.FC<{name: string, role: string, image: string, bio?: str
                   e.currentTarget.parentElement?.appendChild(fallback);
                 }}
             />
+            
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-navy-900/95 opacity-0 group-hover/image:opacity-100 transition-all duration-300 flex flex-col items-center justify-center p-6 text-center">
+                {bio && (
+                    <p className="text-white/90 text-sm leading-relaxed mb-6 overflow-y-auto max-h-[80%] text-justify">
+                        {bio}
+                    </p>
+                )}
+                {linkedin && (
+                    <a 
+                        href={linkedin} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white hover:bg-white hover:text-primary transition-colors mt-auto shadow-lg"
+                    >
+                        <Linkedin size={18} />
+                    </a>
+                )}
+            </div>
         </div>
         <div className="p-6 text-center">
             <h3 className="font-serif text-lg font-bold text-navy-900 mb-1">{name}</h3>
-            <p className="text-xs font-bold uppercase tracking-widest text-primary leading-relaxed mb-3">{role}</p>
-            {bio && <p className="text-sm text-gray-500 leading-relaxed">{bio}</p>}
+            <p className="text-xs font-bold uppercase tracking-widest text-primary leading-relaxed">{role}</p>
         </div>
     </div>
 )

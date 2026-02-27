@@ -29,6 +29,33 @@ const newsData: NewsItem[] = [
     title: 'XYone Congratulates Poseida on Phase 1 CAR-T Cell Trial',
     link: '#',
     summary: 'XYone congratulated Poseida Therapeutics on the start of its Phase 1 study of P-MUC1C-ALLO1 allogeneic CAR-T cells.'
+  },
+  {
+    id: 3,
+    date: 'October 2023',
+    category: 'Publication',
+    title: 'Antibody-drug conjugate targeting MUC1-C',
+    source: 'Frederick National Lab',
+    link: 'https://frederick.cancer.gov/news/biopharmaceutical-development-program-embarks-new-work-targeted-cancer',
+    summary: 'Research highlighting the development of a novel antibody-drug conjugate targeting the MUC1-C oncoprotein.'
+  },
+  {
+    id: 4,
+    date: 'May 2020',
+    category: 'Publication',
+    title: 'MUC1-C drives stemness in colitis to CRC progression',
+    source: 'JCI Insight',
+    link: 'https://insight.jci.org/articles/view/137112',
+    summary: 'Study demonstrating how MUC1-C promotes colitis-associated colorectal cancer progression through stemness pathways.'
+  },
+  {
+    id: 5,
+    date: 'September 2020',
+    category: 'Publication',
+    title: 'MUC1-C in chronic inflammation and carcinogenesis',
+    source: 'Carcinogenesis',
+    link: 'https://academic.oup.com/carcin/article/41/9/1173/5876310',
+    summary: 'Review article discussing the role of MUC1-C in linking chronic inflammation to the development of cancer.'
   }
 ];
 
@@ -45,7 +72,7 @@ const News: React.FC = () => {
             News & <span className="italic text-primary">Presentations</span>
          </h1>
          <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
-            XYone shares scientific progress and company updates across our oncology and endocrinology platforms—highlighting key milestones, non-dilutive funding, strategic collaborations, and scientific presentations as we advance first-in-class programs toward the clinic.
+            XYone shares scientific progress and company updates across our oncology and endocrinology platforms, highlighting key milestones, non-dilutive funding, strategic collaborations, and scientific presentations as we advance first-in-class programs toward the clinic.
          </p>
       </header>
 
@@ -121,7 +148,7 @@ const News: React.FC = () => {
                     </div>
                     <div className="md:col-span-8">
                     <h2 className="text-xl font-serif font-medium text-navy-900 mb-3 group-hover:text-primary transition-colors cursor-pointer leading-tight">
-                        <a href={item.link}>{item.title}</a>
+                        <a href={item.link} target="_blank" rel="noopener noreferrer">{item.title}</a>
                     </h2>
                     {item.source && (
                         <div className="text-sm text-gray-800 font-bold mb-2">Published in {item.source}</div>
@@ -131,7 +158,7 @@ const News: React.FC = () => {
                     )}
                     </div>
                     <div className="md:col-span-1 flex justify-end">
-                    <a href={item.link} className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-primary group-hover:text-white transition-all">
+                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-primary group-hover:text-white transition-all">
                         <ArrowUpRight size={20} />
                     </a>
                     </div>
