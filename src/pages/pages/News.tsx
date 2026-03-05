@@ -15,20 +15,39 @@ interface NewsItem {
 
 const newsData: NewsItem[] = [
   {
-    id: 1,
-    date: 'October 1, 2022',
-    category: 'Press Release',
-    title: 'XYone Awarded $2.5M for Androgen Dysregulation Research',
-    link: '#',
-    summary: 'XYone announced the award of two NIA/SBIR grants totaling over $2.5 million to advance studies in androgen dysregulation.'
+    id: 9,
+    date: 'October 2025',
+    category: 'Event',
+    title: 'Novel MUC1-C-ADC Exhibits Remarkable Anti-Tumor Potency in the Treatment of Triple Negative Breast Cancer (TNBC)',
+    source: 'ESMO 2025',
+    link: '/images/ESMO_2025.png',
+    summary: 'Presented at ESMO 2025. Authors: Kharbanda S, Raina D, Ahmad R, Panchamoorthy G, Jasuja R.'
   },
   {
-    id: 2,
-    date: 'April 1, 2022',
+    id: 10,
+    date: 'October 2024',
+    category: 'Event',
+    title: 'MUC1-C Directed ADC — Preclinical Validation in Solid Tumors',
+    source: 'ESMO 2024',
+    link: '/images/ESMO_2024.png',
+    summary: "Presented at ESMO 2024. Authors: Kharbanda S, et al. — XYone Therapeutics / Brigham & Women's Hospital."
+  },
+  {
+    id: 6,
+    date: 'June 10, 2024',
     category: 'Press Release',
-    title: 'XYone Congratulates Poseida on Phase 1 CAR-T Cell Trial',
+    title: 'XYA02 awarded the Orphan Drug Designation by FDA',
     link: '#',
-    summary: 'XYone congratulated Poseida Therapeutics on the start of its Phase 1 study of P-MUC1C-ALLO1 allogeneic CAR-T cells.'
+    summary: 'The U.S. Food and Drug Administration (FDA) has granted Orphan Drug Designation to XYA02 for the treatment of gastric cancer, including gastroesophageal junction cancer.'
+  },
+  {
+    id: 8,
+    date: 'May 21, 2024',
+    category: 'Publication',
+    title: 'Mucin-1: a promising pan-cancer therapeutic target',
+    source: 'npj Precision Oncology',
+    link: 'https://www.nature.com/articles/s41698-025-01016-2',
+    summary: "A comprehensive review in Nature Partner Journals highlighting Mucin-1 (MUC1) as a high-value target for pan-cancer therapy, reinforcing the scientific rationale behind XYone's MUC1-C-focused platform."
   },
   {
     id: 3,
@@ -40,22 +59,29 @@ const newsData: NewsItem[] = [
     summary: 'Research highlighting the development of a novel antibody-drug conjugate targeting the MUC1-C oncoprotein.'
   },
   {
-    id: 4,
-    date: 'May 2020',
-    category: 'Publication',
-    title: 'MUC1-C drives stemness in colitis to CRC progression',
-    source: 'JCI Insight',
-    link: 'https://insight.jci.org/articles/view/137112',
-    summary: 'Study demonstrating how MUC1-C promotes colitis-associated colorectal cancer progression through stemness pathways.'
+    id: 1,
+    date: 'October 1, 2022',
+    category: 'Press Release',
+    title: 'XYone Awarded $2.5M for Androgen Dysregulation Research',
+    link: '#',
+    summary: 'XYone announced the award of two NIA/SBIR grants totaling over $2.5 million to advance studies in androgen dysregulation.'
   },
   {
-    id: 5,
-    date: 'September 2020',
-    category: 'Publication',
-    title: 'MUC1-C in chronic inflammation and carcinogenesis',
-    source: 'Carcinogenesis',
-    link: 'https://academic.oup.com/carcin/article/41/9/1173/5876310',
-    summary: 'Review article discussing the role of MUC1-C in linking chronic inflammation to the development of cancer.'
+    id: 7,
+    date: 'August 3, 2022',
+    category: 'Press Release',
+    title: 'Roche inks $1.5B Poseida buyout to land off-the-shelf CAR-Ts',
+    source: 'Fierce Biotech',
+    link: 'https://www.fiercebiotech.com/biotech/roche-inks-15b-poseida-buyout-betting-shelf-car-ts-will-democratize-access-cell-therapies',
+    summary: 'Roche acquired Poseida Therapeutics, including the out-licensed P-MUC1C-ALLO1 program, validating the potential of allogeneic CAR-T therapies targeting MUC1-C.'
+  },
+  {
+    id: 2,
+    date: 'April 1, 2022',
+    category: 'Press Release',
+    title: 'XYone Congratulates Poseida on Phase 1 CAR-T Cell Trial',
+    link: '#',
+    summary: 'XYone congratulated Poseida Therapeutics on the start of its Phase 1 study of P-MUC1C-ALLO1 allogeneic CAR-T cells.'
   }
 ];
 

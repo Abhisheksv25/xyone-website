@@ -255,12 +255,12 @@ const Home: React.FC = () => {
                 <div className="p-8 flex flex-col flex-grow">
                    <div className="flex items-center gap-2 mb-4">
                       <FileText size={16} className="text-primary" />
-                      <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">Carcinogenesis • Sep 2020</span>
+                      <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">npj Precision Oncology • May 2024</span>
                    </div>
                    <h3 className="font-serif text-xl font-medium text-navy-900 mb-4 leading-tight">
-                     MUC1-C in chronic inflammation and carcinogenesis
+                     Mucin-1: a promising pan-cancer therapeutic target
                    </h3>
-                   <a href="https://academic.oup.com/carcin/article/41/9/1173/5876310" target="_blank" rel="noopener noreferrer" className="text-navy-900 text-sm font-bold flex items-center group/link hover:text-primary transition-colors mt-auto pt-4">
+                   <a href="https://www.nature.com/articles/s41698-025-01016-2" target="_blank" rel="noopener noreferrer" className="text-navy-900 text-sm font-bold flex items-center group/link hover:text-primary transition-colors mt-auto pt-4">
                       Read More <ArrowRight size={14} className="ml-2 group-hover/link:translate-x-1 transition-transform"/>
                    </a>
                 </div>
@@ -271,13 +271,13 @@ const Home: React.FC = () => {
                 <div className="p-8 flex flex-col flex-grow">
                    <div className="flex items-center gap-2 mb-4">
                       <FileText size={16} className="text-primary" />
-                      <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">JCI Insight • Sep 2020</span>
+                      <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">ESMO • Oct 2025</span>
                    </div>
                    <h3 className="font-serif text-xl font-medium text-navy-900 mb-4 leading-tight">
-                     MUC1-C drives stemness in colitis to CRC progression
+                     Novel MUC1-C-ADC Exhibits Remarkable Anti-Tumor Potency in the Treatment of Triple Negative Breast Cancer (TNBC)
                    </h3>
-                   <a href="https://insight.jci.org/articles/view/137112" target="_blank" rel="noopener noreferrer" className="text-navy-900 text-sm font-bold flex items-center group/link hover:text-primary transition-colors mt-auto pt-4">
-                      Read More <ArrowRight size={14} className="ml-2 group-hover/link:translate-x-1 transition-transform"/>
+                   <a href="/images/ESMO_2025.png" target="_blank" rel="noopener noreferrer" className="text-navy-900 text-sm font-bold flex items-center group/link hover:text-primary transition-colors mt-auto pt-4">
+                      View Poster <ArrowRight size={14} className="ml-2 group-hover/link:translate-x-1 transition-transform"/>
                    </a>
                 </div>
              </div>
@@ -362,10 +362,16 @@ const PipelineRow: React.FC<PipelineRowProps> = ({ data }) => {
                 
                 {/* Timeline Col */}
                 <div className="col-span-1 md:col-span-2">
-                    <div className="flex gap-1">
+                    <div className="flex gap-1 mb-1.5">
                         {[1, 2, 3, 4].map((s) => (
-                            <div key={s} className={`h-2 flex-1 rounded-full ${s <= data.stage ? (data.isPartnered ? 'bg-gray-500' : 'bg-primary') : 'bg-transparent'}`} />
+                            <div key={s} className={`h-1.5 flex-1 rounded-full ${s <= data.stage ? (data.isPartnered ? 'bg-gray-500' : 'bg-primary') : 'bg-gray-100'}`} />
                         ))}
+                    </div>
+                    <div className="text-[10px] font-bold uppercase tracking-widest text-gray-500">
+                        {data.stage === 1 && "Discovery"}
+                        {data.stage === 2 && "Pre-IND"}
+                        {data.stage === 3 && "Phase 1"}
+                        {data.stage === 4 && "Phase 2"}
                     </div>
                 </div>
 

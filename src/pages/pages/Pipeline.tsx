@@ -175,10 +175,16 @@ const PipelineRow: React.FC<PipelineRowProps> = ({ data }) => {
                 
                 {/* Timeline Col */}
                 <div className="col-span-1 md:col-span-2">
-                    <div className="flex gap-1">
+                    <div className="flex gap-1 mb-1.5">
                         {[1, 2, 3, 4].map((s) => (
-                            <div key={s} className={`h-2 flex-1 rounded-full ${s <= data.stage ? (data.isPartnered ? 'bg-gray-500' : 'bg-primary') : 'bg-transparent'}`} />
+                            <div key={s} className={`h-1.5 flex-1 rounded-full ${s <= data.stage ? (data.isPartnered ? 'bg-gray-500' : 'bg-primary') : 'bg-gray-100'}`} />
                         ))}
+                    </div>
+                    <div className="text-[10px] font-bold uppercase tracking-widest text-gray-500">
+                        {data.stage === 1 && "Discovery"}
+                        {data.stage === 2 && "Pre-IND"}
+                        {data.stage === 3 && "Phase 1"}
+                        {data.stage === 4 && "Phase 2"}
                     </div>
                 </div>
 
