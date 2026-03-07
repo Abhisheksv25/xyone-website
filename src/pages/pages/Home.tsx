@@ -44,7 +44,7 @@ const Home: React.FC = () => {
                 XYone’s platform is built on a fundamental insight: prior MUC1 therapies failed because they targeted the shedding MUC1-N domain. We are building a first-in-class therapeutics selectively targeting MUC1-C, the non-shedding, membrane-anchored oncogenic driver present across ~80% of solid tumors. This avoids serum sink, enabling improved therapeutic index and durable tumor elimination, unlocking a differentiated path to solid tumor control.
               </p>
               
-              <Link to="/science" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-lg font-semibold text-lg hover:bg-red-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 group">
+              <Link to="/science" className="inline-flex items-center gap-2 px-8 py-3.5 bg-primary text-white rounded-lg font-semibold text-lg hover:bg-red-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 group">
                 Explore our Platform
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
               </Link>
@@ -56,47 +56,43 @@ const Home: React.FC = () => {
                 {/* Top Border Gradient */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-red-400"></div>
                 
-                <div className="text-xs font-bold tracking-[0.15em] uppercase text-white/50 mb-4">Entering Clinical Trials</div>
-                
-                <h2 className="font-sans text-5xl font-bold text-white mb-6 leading-none">
-                  2026
-                </h2>
-                
-                <div className="space-y-6 mb-8">
-                  {/* Asset 1 */}
-                  <div className="relative pl-6">
-                    <div className="absolute left-0 top-2 bottom-0 w-1 bg-gradient-to-b from-red-400 to-transparent rounded-full"></div>
-                    <div className="text-xl font-bold text-red-400 mb-1">XYA02</div>
-                    <div className="text-sm font-semibold text-white/90 mb-1">Phase 1 • Summer 2026</div>
-                    <div className="text-sm text-white/60">
-                        NSCLC, Ovarian, Gastric, Colorectal
+                <div className="relative z-10">
+                    {/* <div className="text-xs font-bold tracking-[0.2em] uppercase text-white/40 mb-2">Milestone</div> */}
+                    
+                    <h2 className="font-sans text-4xl md:text-5xl font-bold text-white mb-2 leading-none tracking-tight">
+                      2026
+                    </h2>
+                    <div className="text-base font-bold text-primary uppercase tracking-widest mb-8">Entering Clinical Trials</div>
+                    
+                    <div className="space-y-6 mb-8">
+                      {/* Asset 1 */}
+                      <div className="relative pl-6 border-l-2 border-red-500">
+                        <div className="text-2xl font-bold text-white mb-1">XYA02</div>
+                        <div className="text-xs font-medium text-white/60 uppercase tracking-wider">Phase 1 • Summer 2026</div>
+                      </div>
+                      
+                      {/* Asset 2 */}
+                      <div className="relative pl-6 border-l-2 border-red-500/50">
+                        <div className="text-2xl font-bold text-white mb-1">XYA01</div>
+                        <div className="text-xs font-medium text-white/60 uppercase tracking-wider">Phase 1 • Late 2026</div>
+                      </div>
                     </div>
-                  </div>
-                  
-                  {/* Asset 2 */}
-                  <div className="relative pl-6">
-                    <div className="absolute left-0 top-2 bottom-0 w-1 bg-gradient-to-b from-red-400 to-transparent rounded-full"></div>
-                    <div className="text-xl font-bold text-red-400 mb-1">XYA01</div>
-                    <div className="text-sm font-semibold text-white/90 mb-1">Phase 1 • Late 2026</div>
-                    <div className="text-sm text-white/60">
-                        Triple-Negative & Metastatic Breast Cancer
+                    
+                    <div className="pt-6 border-t border-white/10 mb-6">
+                      <div className="text-[10px] font-bold tracking-widest uppercase text-white/40 mb-3">Validated By</div>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="px-2.5 py-1 bg-white/5 rounded-full text-[10px] font-medium text-white/80">NCI Funded</span>
+                        <span className="px-2.5 py-1 bg-white/5 rounded-full text-[10px] font-medium text-white/80">Harvard Medical</span>
+                        <span className="px-2.5 py-1 bg-white/5 rounded-full text-[10px] font-medium text-white/80">Roche</span>
+                        <span className="px-2.5 py-1 bg-white/5 rounded-full text-[10px] font-medium text-white/80">Poseida Therauputics</span>
+                      </div>
                     </div>
-                  </div>
+                    
+                    <Link to="/pipeline" className="flex items-center justify-center gap-3 w-full py-3.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all backdrop-blur-sm group">
+                      View Full Pipeline
+                      <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
+                    </Link>
                 </div>
-                
-                <div className="pt-6 border-t border-white/10 mb-6">
-                  <div className="text-[10px] font-bold tracking-widest uppercase text-white/50 mb-3">Validated By</div>
-                  <div className="flex flex-wrap gap-2">
-                    <div className="px-2.5 py-1.5 bg-white/10 border border-white/10 rounded-md text-[11px] font-semibold text-white/90">NCI Partnership</div>
-                    <div className="px-2.5 py-1.5 bg-white/10 border border-white/10 rounded-md text-[11px] font-semibold text-white/90">Harvard Medical</div>
-                    <div className="px-2.5 py-1.5 bg-white/10 border border-white/10 rounded-md text-[11px] font-semibold text-white/90">Roche/Poseida Partnership</div>
-                  </div>
-                </div>
-                
-                <Link to="/pipeline" className="flex items-center justify-center gap-3 w-full py-3.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all backdrop-blur-sm group">
-                  View Full Pipeline
-                  <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
-                </Link>
               </div>
             </div>
           </div>
@@ -255,7 +251,7 @@ const Home: React.FC = () => {
                 <div className="p-8 flex flex-col flex-grow">
                    <div className="flex items-center gap-2 mb-4">
                       <FileText size={16} className="text-primary" />
-                      <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">npj Precision Oncology • May 2024</span>
+                      <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">npj Precision Oncology • July 2025</span>
                    </div>
                    <h3 className="font-serif text-xl font-medium text-navy-900 mb-4 leading-tight">
                      Mucin-1: a promising pan-cancer therapeutic target
