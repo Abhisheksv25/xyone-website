@@ -130,17 +130,17 @@ const Science: React.FC = () => {
                 tags={['DAR 4', 'VC Linker', 'NCI NExT Selected', 'Non-Dilutive Program']}
                 features={[
                     "Complete tumor suppression in breast/lung models",
-                    "NCI conducting IND-enabling activities"
+                    "NCI helps in GMP manufacturing and conducting IND-enabling activities"
                 ]}
             />
             <AssetCard 
                 title="P-MUC1C-ALLO1" 
                 subtitle="Allogeneic CAR-T"
-                description="Out-licensed and currently managed by Roche for development and commercialization."
+                description="Roche licensed our anti-MUC1-C antibody for their allogeneic CAR-T program targeting TNBC and other solid tumors."
                 tags={['CAR-T', 'Partnered', 'Roche']}
                 features={[
-                    "Validates MUC1-C targeting safety",
-                    "No unexpected toxicity in 45 patients"
+                    "Phase 1 clinical data confirmed strong human safety with no unexpected toxicity",
+                    "First clinical validation of MUC1-C targeting safety in humans",
                 ]}
             />
         </div>

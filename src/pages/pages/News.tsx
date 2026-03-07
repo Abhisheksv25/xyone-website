@@ -16,7 +16,7 @@ interface NewsItem {
 const newsData: NewsItem[] = [
   {
     id: 6,
-    date: 'June 10, 2024',
+    date: 'May, 2025',
     category: 'Press Release',
     title: 'XYA02 awarded the Orphan Drug Designation by FDA',
     link: '#',
