@@ -15,34 +15,16 @@ interface NewsItem {
 
 const newsData: NewsItem[] = [
   {
-    id: 9,
-    date: 'October 2025',
-    category: 'Event',
-    title: 'Novel MUC1-C-ADC Exhibits Remarkable Anti-Tumor Potency in the Treatment of Triple Negative Breast Cancer (TNBC)',
-    source: 'ESMO 2025',
-    link: '/images/ESMO_2025.png',
-    summary: 'Presented at ESMO 2025. Authors: Kharbanda S, Raina D, Ahmad R, Panchamoorthy G, Jasuja R.'
-  },
-  {
-    id: 10,
-    date: 'October 2024',
-    category: 'Event',
-    title: 'MUC1-C Directed ADC — Preclinical Validation in Solid Tumors',
-    source: 'ESMO 2024',
-    link: '/images/ESMO_2024.png',
-    summary: "Presented at ESMO 2024. Authors: Kharbanda S, et al. — XYone Therapeutics / Brigham & Women's Hospital."
-  },
-  {
     id: 6,
     date: 'June 10, 2024',
     category: 'Press Release',
     title: 'XYA02 awarded the Orphan Drug Designation by FDA',
     link: '#',
-    summary: 'The U.S. Food and Drug Administration (FDA) has granted Orphan Drug Designation to XYA02 for the treatment of gastric cancer, including gastroesophageal junction cancer.'
+    summary: 'The U.S. Food and Drug Administration (FDA) has granted Orphan Drug Designation to XYA02 for the treatment of colorectal cancer (R/R-mCRC), Gastric cancer, Lung cancer and Ovarian cancer.'
   },
   {
     id: 8,
-    date: 'May 21, 2024',
+    date: 'July 02, 2025',
     category: 'Publication',
     title: 'Mucin-1: a promising pan-cancer therapeutic target',
     source: 'npj Precision Oncology',
@@ -51,8 +33,8 @@ const newsData: NewsItem[] = [
   },
   {
     id: 3,
-    date: 'October 2023',
-    category: 'Publication',
+    date: 'Feb 27, 2024',
+    category: 'Press Release',
     title: 'Antibody-drug conjugate targeting MUC1-C',
     source: 'Frederick National Lab',
     link: 'https://frederick.cancer.gov/news/biopharmaceutical-development-program-embarks-new-work-targeted-cancer',
@@ -68,7 +50,7 @@ const newsData: NewsItem[] = [
   },
   {
     id: 7,
-    date: 'August 3, 2022',
+    date: 'November 26, 2024',
     category: 'Press Release',
     title: 'Roche inks $1.5B Poseida buyout to land off-the-shelf CAR-Ts',
     source: 'Fierce Biotech',
@@ -110,7 +92,7 @@ const News: React.FC = () => {
                 <Star size={14} className="fill-primary" /> Featured Presentation
             </h2>
             <a 
-                href="https://xyonetx.com/wp-content/uploads/2025/01/onco-whitepaper-scientific-dec-01-2023.pdf" 
+                href="https://drive.google.com/file/d/1xDM-WHEHPfbrRWuv9K549j3h_JBhf8oW/view?usp=sharing" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block bg-navy-900 text-white rounded-xl p-8 md:p-10 shadow-xl relative overflow-hidden group cursor-pointer hover:shadow-2xl transition-all"
@@ -173,8 +155,12 @@ const News: React.FC = () => {
                     </div>
                     </div>
                     <div className="md:col-span-8">
-                    <h2 className="text-xl font-serif font-medium text-navy-900 mb-3 group-hover:text-primary transition-colors cursor-pointer leading-tight">
-                        <a href={item.link} target="_blank" rel="noopener noreferrer">{item.title}</a>
+                    <h2 className={`text-xl font-serif font-medium text-navy-900 mb-3 leading-tight ${item.link !== '#' ? 'group-hover:text-primary transition-colors cursor-pointer' : ''}`}>
+                        {item.link !== '#' ? (
+                            <a href={item.link} target="_blank" rel="noopener noreferrer">{item.title}</a>
+                        ) : (
+                            item.title
+                        )}
                     </h2>
                     {item.source && (
                         <div className="text-sm text-gray-800 font-bold mb-2">Published in {item.source}</div>
@@ -184,9 +170,11 @@ const News: React.FC = () => {
                     )}
                     </div>
                     <div className="md:col-span-1 flex justify-end">
-                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-primary group-hover:text-white transition-all">
-                        <ArrowUpRight size={20} />
-                    </a>
+                    {item.link !== '#' && (
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-primary group-hover:text-white transition-all">
+                            <ArrowUpRight size={20} />
+                        </a>
+                    )}
                     </div>
                 </div>
                 </article>

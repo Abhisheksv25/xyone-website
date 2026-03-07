@@ -31,14 +31,14 @@ const Navbar: React.FC = () => {
         isScrolled || mobileMenuOpen ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2 group">
         {/* <Link to="/" className="flex items-center group"> */}
           <img 
             src={"/images/logo2_xyone.png"} 
             alt="XYone Therapeutics" 
-            className="h-12 w-auto object-contain transition-transform group-hover:scale-105"
+            className="h-20 w-auto object-contain transition-transform group-hover:scale-105"
             onError={(e) => {
               // Fallback if image fails
               e.currentTarget.style.display = 'none';
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
           />
           {/* Fallback Text (Hidden if image loads, handled by the error above typically, but simpler to just replace) */}
         {/* </Link> */}
-          <span className={`font-serif text-xl font-bold tracking-tight ${isScrolled || location.pathname !== '/' ? 'text-navy-900' : 'text-navy-900'}`}>
+          <span className={`font-serif text-3xl font-bold tracking-tight ${isScrolled || location.pathname !== '/' ? 'text-navy-900' : 'text-navy-900'}`}>
             XYone Therapeutics
           </span>
         </Link>
@@ -84,7 +84,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-20 left-0 w-full bg-white border-b border-gray-200 shadow-xl py-6 px-6 flex flex-col space-y-4">
+        <div className="md:hidden absolute top-24 left-0 w-full bg-white border-b border-gray-200 shadow-xl py-6 px-6 flex flex-col space-y-4">
           {links.map((link) => (
             <Link 
               key={link.name} 

@@ -353,7 +353,7 @@ const PipelineRow: React.FC<PipelineRowProps> = ({ data }) => {
                 <div className="col-span-1 md:col-span-2 flex items-start gap-3">
                     <ChevronDown className={`text-primary mt-1 transform transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`} size={20} />
                     <div>
-                        <h3 className="font-serif text-navy-900 text-lg font-bold leading-tight">{data.id}</h3>
+                        <h3 className="font-serif text-navy-900 text-lg font-bold leading-tight" style={{ fontVariantNumeric: 'lining-nums', fontFeatureSettings: '"tnum" 1' }}>{data.id}</h3>
                     </div>
                 </div>
                 
@@ -369,7 +369,7 @@ const PipelineRow: React.FC<PipelineRowProps> = ({ data }) => {
                     </div>
                     <div className="text-[10px] font-bold uppercase tracking-widest text-gray-500">
                         {data.stage === 1 && "Discovery"}
-                        {data.stage === 2 && "Pre-IND"}
+                        {data.stage === 2 && "Filing IND Soon"}
                         {data.stage === 3 && "Phase 1"}
                         {data.stage === 4 && "Phase 2"}
                     </div>

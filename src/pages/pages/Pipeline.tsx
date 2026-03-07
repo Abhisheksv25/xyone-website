@@ -68,7 +68,7 @@ const Pipeline: React.FC = () => {
         <p className="max-w-3xl text-xl text-gray-600 leading-relaxed mb-8">
           XYone Therapeutics is advancing a multi-asset pipeline built around a proprietary MUC1-C targeting platform in oncology, alongside development-stage programs supporting personalized hormone therapies and precision drug delivery.
         </p>
-        <p className="text-gray-500 max-w-3xl">
+        <p className="max-w-3xl text-xl text-gray-600 leading-relaxed">
           Our pipeline is designed to generate meaningful clinical catalysts starting in 2026, while expanding platform potential across multiple high-unmet-need indications.
         </p>
       </header>
@@ -102,7 +102,7 @@ const Pipeline: React.FC = () => {
       <main className="py-8 max-w-7xl mx-auto px-6">
         {/* Header Row */}
         <div className="hidden md:grid grid-cols-12 gap-4 px-4 py-3 bg-gray-50 border-b border-gray-200 text-xs font-semibold uppercase tracking-widest text-gray-500">
-            <div className="col-span-2 pl-8">Molecule Name</div>
+            <div className="col-span-2 pl-8">Candidate Name</div>
             <div className="col-span-2">Therapeutic Area</div>
             <div className="col-span-4">Potential Indications</div>
             <div className="col-span-2">Status / Stage</div>
@@ -166,7 +166,7 @@ const PipelineRow: React.FC<PipelineRowProps> = ({ data }) => {
                 <div className="col-span-1 md:col-span-2 flex items-start gap-3">
                     <ChevronDown className={`text-primary mt-1 transform transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`} size={20} />
                     <div>
-                        <h3 className="font-serif text-navy-900 text-lg font-bold leading-tight">{data.id}</h3>
+                        <h3 className="font-serif text-navy-900 text-lg font-bold leading-tight" style={{ fontVariantNumeric: 'lining-nums', fontFeatureSettings: '"tnum" 1' }}>{data.id}</h3>
                     </div>
                 </div>
                 
@@ -182,7 +182,7 @@ const PipelineRow: React.FC<PipelineRowProps> = ({ data }) => {
                     </div>
                     <div className="text-[10px] font-bold uppercase tracking-widest text-gray-500">
                         {data.stage === 1 && "Discovery"}
-                        {data.stage === 2 && "Pre-IND"}
+                        {data.stage === 2 && "Filing IND Soon"}
                         {data.stage === 3 && "Phase 1"}
                         {data.stage === 4 && "Phase 2"}
                     </div>

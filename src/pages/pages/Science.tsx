@@ -112,7 +112,7 @@ const Science: React.FC = () => {
             </p>
         </div>
         
-        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
             <AssetCard 
                 title="XYA02" 
                 subtitle="Exatecan (Topo1) ADC"
@@ -126,11 +126,21 @@ const Science: React.FC = () => {
             <AssetCard 
                 title="XYA01" 
                 subtitle="MMAE ADC"
-                description="Selected by NCI NExT program. Initial indications in Metastatic Breast Cancer (HR+/HER2-) and TNBC."
-                tags={['DAR 4', 'VC Linker', 'NCI NExT Selected']}
+                description="Selected by NCI NExT program. NCI funds GMP manufacturing and clinical trials. Initial indications in Metastatic Breast Cancer (HR+/HER2-) and TNBC."
+                tags={['DAR 4', 'VC Linker', 'NCI NExT Selected', 'Non-Dilutive Program']}
                 features={[
                     "Complete tumor suppression in breast/lung models",
                     "NCI conducting IND-enabling activities"
+                ]}
+            />
+            <AssetCard 
+                title="P-MUC1C-ALLO1" 
+                subtitle="Allogeneic CAR-T"
+                description="Out-licensed and currently managed by Roche for development and commercialization."
+                tags={['CAR-T', 'Partnered', 'Roche']}
+                features={[
+                    "Validates MUC1-C targeting safety",
+                    "No unexpected toxicity in 45 patients"
                 ]}
             />
         </div>
@@ -180,13 +190,6 @@ const Science: React.FC = () => {
                         className="group bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer flex flex-col overflow-hidden hover:-translate-y-1"
                         onClick={() => setSelectedPoster(poster)}
                     >
-                        <div className="aspect-[16/10] relative overflow-hidden bg-gray-100">
-                            <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-primary text-xs font-bold px-3 py-1.5 rounded-md uppercase tracking-wider z-10 shadow-sm">
-                                {poster.badge}
-                            </div>
-                            <img src={poster.image} alt={poster.title} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
-                            <div className="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/10 transition-colors duration-300" />
-                        </div>
                         <div className="p-8 flex flex-col flex-grow">
                             <div className="flex items-center gap-2 mb-4">
                                 <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
@@ -331,7 +334,7 @@ const AssetCard: React.FC<{title: string, subtitle: string, description: string,
     <div className="bg-navy-800 rounded-xl p-8 text-left border border-white/10 hover:border-primary/50 transition-all group flex flex-col h-full">
         <div className="flex justify-between items-start mb-6">
             <div>
-                <h3 className="text-3xl font-serif text-white mb-1 group-hover:text-primary transition-colors">{title}</h3>
+                <h3 className="text-3xl font-serif text-white mb-1 group-hover:text-primary transition-colors" style={{ fontVariantNumeric: 'lining-nums', fontFeatureSettings: '"tnum" 1' }}>{title}</h3>
                 <div className="text-sm font-bold text-primary uppercase tracking-wider">{subtitle}</div>
             </div>
         </div>

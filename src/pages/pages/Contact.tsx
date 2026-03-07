@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, MapPin } from 'lucide-react';
+import { ArrowRight, MapPin, Mail } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
@@ -58,6 +58,14 @@ const Contact: React.FC = () => {
                             Canton, MA 02021<br/>
                             United States
                         </p>
+                    </div>
+
+                    <div>
+                        <div className="flex items-center gap-2 mb-4">
+                            <Mail className="text-primary" size={20} />
+                            <h3 className="text-xs font-semibold uppercase tracking-widest text-gray-400">Email</h3>
+                        </div>
+                        <a href="mailto:info@xyonetx.com" className="text-lg font-medium leading-relaxed text-navy-900 hover:text-primary transition-colors">info@xyonetx.com</a>
                     </div>
                     
                     {/* Map Embed */}
