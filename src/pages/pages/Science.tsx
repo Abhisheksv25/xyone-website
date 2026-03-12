@@ -41,7 +41,7 @@ const Science: React.FC = () => {
   return (
     <div className="bg-background-light">
       {/* Hero Section */}
-      <header className="pt-24 pb-8 px-6 max-w-7xl mx-auto">
+      <header className="pt-32 pb-8 px-6 max-w-7xl mx-auto">
          <span className="inline-block px-3 py-1 rounded-sm bg-primary/10 text-primary text-base font-bold tracking-widest uppercase mb-6">Our Science</span>
          <h1 className="font-serif text-5xl md:text-7xl mb-8 leading-tight text-navy-900">
             Precision Oncology & <br/> <span className="italic text-primary">Endocrine Innovation</span>.
@@ -119,7 +119,7 @@ const Science: React.FC = () => {
                 description="Phase 1 initiating Summer 2026. Targeting Non-squamous NSCLC, High-grade serous ovarian, Gastric/GEJ, and Colorectal cancer."
                 tags={['DAR 4', 'Beta-glucuronide Linker']}
                 features={[
-                    "Dramatic efficacy in large ovarian PDX studies",
+                    "Dramatic sustained efficacy in multiple tumor types",
                     "Head-to-head superiority vs MUC1-N comparator"
                 ]}
             />
@@ -129,8 +129,8 @@ const Science: React.FC = () => {
                 description="Selected by NCI NExT program. NCI funds GMP manufacturing and clinical trials. Initial indications in Metastatic Breast Cancer (HR+/HER2-) and TNBC."
                 tags={['DAR 4', 'VC Linker', 'NCI NExT Selected', 'Non-Dilutive Program']}
                 features={[
-                    "Complete tumor suppression in breast/lung models",
-                    "NCI helps in GMP manufacturing and conducting IND-enabling activities"
+                    "Selected for Prestigious NCI-NExT program",
+                    "NCI leading the non-dilutive development program including manufacture and clinical trials"
                 ]}
             />
             <AssetCard 
@@ -214,35 +214,6 @@ const Science: React.FC = () => {
         </div>
       </section>
 
-      {/* Preclinical Validation */}
-      <section className="py-12 bg-white">
-         <div className="max-w-7xl mx-auto px-6">
-            <div className="border-l-4 border-primary pl-8 py-2 mb-12">
-                <h2 className="font-serif text-3xl text-navy-900 mb-2">Preclinical Validation</h2>
-                <p className="text-gray-600 max-w-2xl">
-                    In head-to-head comparisons across extensive in vitro and CDX/PDX datasets, XYone reports superior performance for its MUC1-C ADC approach. XYA02 preclinical data demonstrate sustained tumor growth inhibition consistent with durable cytotoxicity.
-                </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-                <div className="bg-gray-50 p-8 rounded-lg">
-                    <Shield className="text-primary mb-4" size={32} />
-                    <h4 className="font-bold text-navy-900 mb-2">Tumor Suppression</h4>
-                    <p className="text-sm text-gray-600">Complete tumor suppression shown in representative breast and lung cancer models for XYA01.</p>
-                </div>
-                <div className="bg-gray-50 p-8 rounded-lg">
-                    <Zap className="text-primary mb-4" size={32} />
-                    <h4 className="font-bold text-navy-900 mb-2">Efficacy Profile</h4>
-                    <p className="text-sm text-gray-600">Dramatic efficacy demonstrated in large ovarian PDX studies for XYA02.</p>
-                </div>
-                <div className="bg-gray-50 p-8 rounded-lg">
-                    <Activity className="text-primary mb-4" size={32} />
-                    <h4 className="font-bold text-navy-900 mb-2">Superior Specificity</h4>
-                    <p className="text-sm text-gray-600">Avoids shedding-related sequestration and glycosylation-driven variability seen with MUC1-N strategies.</p>
-                </div>
-            </div>
-         </div>
-      </section>
 
       {/* Endocrinology */}
       <section className="py-12 bg-gray-50 border-t border-gray-200">
@@ -290,14 +261,14 @@ const Science: React.FC = () => {
               
               <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 opacity-70 grayscale">
                   {/* Text-based logos for simplicity, or placeholders */}
-                  {['National Cancer Institute', 'National Institutes of Health', 'Roche', 'Poseida Therapeutics', 'Dana-Farber Cancer Institute', 'Mass General Brigham', 'Fred Hutchinson Cancer Center', 'Memorial Sloan Kettering'].map((partner) => (
+                  {['National Cancer Institute', 'Roche', 'Dana-Farber Cancer Institute', 'Mass General Brigham', 'Fred Hutchinson Cancer Center', 'Memorial Sloan Kettering', 'Peter MacCallum Cancer Centre, Australia', 'Roswell Park Comprehensive Cancer Center', 'Huntsman Cancer Institute'].map((partner) => (
                       <div key={partner} className="text-lg font-bold text-gray-400 uppercase tracking-tight hover:text-navy-900 transition-colors cursor-default">
                           {partner}
                       </div>
                   ))}
               </div>
               <div className="mt-8 text-sm text-gray-500">
-                  And other leading research centers including Huntsman Cancer Institute, Roswell Park, Johns Hopkins University, and Peter MacCallum Cancer Centre.
+                  And other leading research centers including Johns Hopkins University.
               </div>
           </div>
       </section>

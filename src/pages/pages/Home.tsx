@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, Activity, Dna, FileText, Target, Zap, ChevronDown } from 'lucide-react';
+import { ArrowRight, Activity, Dna, FileText, Target, Zap, ChevronDown, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { leadership } from '../../data/data/team';
 
@@ -9,6 +9,7 @@ const Home: React.FC = () => {
       id: "XYA02",
       modality: "ADC (Exatecan/Topo1)",
       therapeuticArea: "Oncology",
+      partner: "N/A",
       indications: "NSCLC, Ovarian, Colorectal, Gastric/GEJ",
       stage: 3,
       mechanismDescription: "MUC1-C–directed ADC with Exatecan payload (DAR 4; Beta-glucuronide linker). Selectively delivers a Topoisomerase I inhibitor to MUC1-C-expressing tumor cells.",
@@ -18,6 +19,7 @@ const Home: React.FC = () => {
       id: "XYA01",
       modality: "ADC (MMAE)",
       therapeuticArea: "Oncology",
+      partner: "NCI (Non-dilutive)",
       indications: "TNBC, Metastatic Breast Cancer (HR+/HER2−)",
       stage: 2,
       mechanismDescription: "MUC1-C ADC with MMAE payload (DAR 4; VC linker). NCI-Led Clinical Program (NExT).",
@@ -28,7 +30,7 @@ const Home: React.FC = () => {
   return (
     <div className="bg-background-light">
       {/* Hero Section */}
-      <section className="relative pt-14 pb-6 md:pt-24 md:pb-10 overflow-hidden bg-gradient-to-b from-white to-gray-50">
+      <section className="relative pt-32 pb-6 md:pt-30 md:pb-10 overflow-hidden bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-12 gap-8 md:gap-12 items-center">
             {/* Left Column */}
@@ -52,33 +54,30 @@ const Home: React.FC = () => {
 
             {/* Right Column - Clinical Card */}
             <div className="lg:col-span-5 relative">
-              <div className="bg-gradient-to-br from-navy-900 to-black rounded-3xl p-6 md:p-8 shadow-2xl border border-white/10 relative overflow-hidden">
+              <div className="bg-gradient-to-br from-navy-900 to-black rounded-2xl p-6 shadow-2xl border border-white/10 relative overflow-hidden">
                 {/* Top Border Gradient */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-red-400"></div>
                 
                 <div className="relative z-10">
-                    {/* <div className="text-xs font-bold tracking-[0.2em] uppercase text-white/40 mb-2">Milestone</div> */}
-                    
-                    <h2 className="font-sans text-4xl md:text-5xl font-bold text-white mb-2 leading-none tracking-tight">
-                      2026
+                    <h2 className="font-serif text-2xl md:text-3xl font-bold text-white mb-6">
+                      Two ADC assets entering clinical trials in <span className="text-red-500">2026</span>
                     </h2>
-                    <div className="text-base font-bold text-primary uppercase tracking-widest mb-8">Entering Clinical Trials</div>
                     
-                    <div className="space-y-6 mb-8">
+                    <div className="space-y-4 mb-6">
                       {/* Asset 1 */}
-                      <div className="relative pl-6 border-l-2 border-red-500">
-                        <div className="text-2xl font-bold text-white mb-1">XYA02</div>
-                        <div className="text-xs font-medium text-white/60 uppercase tracking-wider">Phase 1 • Summer 2026</div>
+                      <div className="relative pl-4 border-l-2 border-red-500">
+                        <div className="text-xl font-bold text-white mb-1">XYA02</div>
+                        <div className="text-[11px] font-medium text-white/60 uppercase tracking-wider">Phase 1 • Summer 2026</div>
                       </div>
                       
                       {/* Asset 2 */}
-                      <div className="relative pl-6 border-l-2 border-red-500/50">
-                        <div className="text-2xl font-bold text-white mb-1">XYA01</div>
-                        <div className="text-xs font-medium text-white/60 uppercase tracking-wider">Phase 1 • Late 2026</div>
+                      <div className="relative pl-4 border-l-2 border-red-500/50">
+                        <div className="text-xl font-bold text-white mb-1">XYA01</div>
+                        <div className="text-[11px] font-medium text-white/60 uppercase tracking-wider">Phase 1 • Late 2026</div>
                       </div>
                     </div>
                     
-                    <div className="pt-6 border-t border-white/10 mb-6">
+                    <div className="pt-4 border-t border-white/10 mb-4">
                       <div className="text-[10px] font-bold tracking-widest uppercase text-white/40 mb-3">Validated By</div>
                       <div className="flex flex-wrap gap-2">
                         <span className="px-2.5 py-1 bg-white/5 rounded-full text-[10px] font-medium text-white/80">NCI Funded</span>
@@ -88,7 +87,7 @@ const Home: React.FC = () => {
                       </div>
                     </div>
                     
-                    <Link to="/pipeline" className="flex items-center justify-center gap-3 w-full py-3.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all backdrop-blur-sm group">
+                    <Link to="/pipeline" className="flex items-center justify-center gap-3 w-full py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all backdrop-blur-sm group">
                       View Full Pipeline
                       <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
                     </Link>
@@ -165,10 +164,10 @@ const Home: React.FC = () => {
             {/* Header Row */}
             <div className="hidden md:grid grid-cols-12 gap-4 px-4 py-3 bg-gray-50 border-b border-gray-200 text-xs font-semibold uppercase tracking-widest text-gray-500">
                 <div className="col-span-2 pl-8">Molecule Name</div>
-                <div className="col-span-2">Therapeutic Area</div>
                 <div className="col-span-4">Potential Indications</div>
                 <div className="col-span-2">Status / Stage</div>
                 <div className="col-span-2">Modality</div>
+                <div className="col-span-2">Partner</div>
             </div>
             
             <div className="space-y-0">
@@ -202,11 +201,11 @@ const Home: React.FC = () => {
              <div className="grid md:grid-cols-4 gap-8">
                 {leadership.slice(0, 4).map((person, i) => (
                     <div key={i} className="group bg-white rounded-lg overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col">
-                        <div className="h-64 bg-gray-100 relative overflow-hidden flex items-center justify-center">
+                        <div className="h-64 bg-gray-100 relative overflow-hidden flex items-center justify-center group/image">
                              <img 
                                 src={person.image} 
                                 alt={person.name} 
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" 
                                 onError={(e) => {
                                   // Fallback to initial if image fails
                                   e.currentTarget.style.display = 'none';
@@ -217,6 +216,25 @@ const Home: React.FC = () => {
                                   e.currentTarget.parentElement?.appendChild(fallback);
                                 }}
                              />
+                             
+                             {/* Overlay */}
+                            <div className="absolute inset-0 bg-navy-900/95 opacity-0 group-hover/image:opacity-100 transition-all duration-300 flex flex-col items-center justify-center p-6 text-center">
+                                {person.bio && (
+                                    <p className="text-white/90 text-sm leading-relaxed mb-6 overflow-y-auto max-h-[80%] text-justify">
+                                        {person.bio}
+                                    </p>
+                                )}
+                                {person.linkedin && (
+                                    <a 
+                                        href={person.linkedin} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer" 
+                                        className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white hover:bg-white hover:text-primary transition-colors mt-auto shadow-lg"
+                                    >
+                                        <Linkedin size={18} />
+                                    </a>
+                                )}
+                            </div>
                         </div>
                         <div className="p-6 flex flex-col flex-grow">
                             <h3 className="font-serif text-lg font-medium text-navy-900 mb-2">{person.name}</h3>
@@ -328,6 +346,7 @@ interface PipelineRowProps {
     data: {
         id: string;
         therapeuticArea: string;
+        partner: string;
         indications: string;
         stage: number;
         modality: string;
@@ -353,7 +372,6 @@ const PipelineRow: React.FC<PipelineRowProps> = ({ data }) => {
                     </div>
                 </div>
                 
-                <div className="col-span-1 md:col-span-2 text-sm text-gray-700 font-medium">{data.therapeuticArea}</div>
                 <div className="col-span-1 md:col-span-4 text-sm text-gray-700">{data.indications}</div>
                 
                 {/* Timeline Col */}
@@ -372,6 +390,7 @@ const PipelineRow: React.FC<PipelineRowProps> = ({ data }) => {
                 </div>
 
                 <div className="col-span-1 md:col-span-2 text-sm text-gray-700">{data.modality}</div>
+                <div className="col-span-1 md:col-span-2 text-sm text-gray-700 font-medium">{data.partner}</div>
             </div>
 
             {/* Details Panel */}

@@ -9,6 +9,7 @@ const Pipeline: React.FC = () => {
         id: "XYA02",
         modality: "ADC (Exatecan/Topo1)",
         therapeuticArea: "Oncology",
+        partner: "N/A",
         indications: "NSCLC, Ovarian, Colorectal, Gastric/GEJ",
         stage: 3, // 1: Pre-Clinical, 2: IND-Enabling, 3: Phase 1, 4: Phase 2
         mechanism: "Next-gen ADC targeting MUC1-C with Exatecan payload (DAR 4)",
@@ -19,6 +20,7 @@ const Pipeline: React.FC = () => {
         id: "XYA01",
         modality: "ADC (MMAE)",
         therapeuticArea: "Oncology",
+        partner: "NCI (Non-dilutive)",
         indications: "TNBC, Metastatic Breast Cancer (HR+/HER2−)",
         stage: 2,
         mechanism: "MUC1-C ADC with MMAE payload (DAR 4; VC linker)",
@@ -29,6 +31,7 @@ const Pipeline: React.FC = () => {
         id: "P-MUC1C-ALLO1",
         modality: "CAR-T",
         therapeuticArea: "Oncology",
+        partner: "Roche",
         indications: "Multiple Solid Tumors",
         stage: 3,
         isPartnered: true,
@@ -40,6 +43,7 @@ const Pipeline: React.FC = () => {
         id: "XYB01",
         modality: "Bispecific Antibodies",
         therapeuticArea: "Oncology",
+        partner: "N/A",
         indications: "Solid Tumors",
         stage: 1,
         mechanism: "Multi-modal (ADCC, TCE, Dual Payload)",
@@ -50,6 +54,7 @@ const Pipeline: React.FC = () => {
         id: "Endocrine Platform",
         modality: "Nano/Microparticle",
         therapeuticArea: "Endocrinology",
+        partner: "N/A",
         indications: "Hormonal Regulation",
         stage: 1,
         mechanism: "Personalized, programmable dosing",
@@ -62,7 +67,7 @@ const Pipeline: React.FC = () => {
 
   return (
     <div className="bg-background-light">
-      <header className="pt-24 pb-8 px-6 max-w-7xl mx-auto">
+      <header className="pt-32 pb-8 px-6 max-w-7xl mx-auto">
         <span className="inline-block px-3 py-1 rounded-sm bg-primary/10 text-primary text-base font-bold tracking-widest uppercase mb-6">Our Pipeline</span>
         <h1 className="font-serif text-5xl md:text-7xl mb-6 leading-tight text-navy-900">Therapeutic Pipeline</h1>
         <p className="max-w-3xl text-xl text-gray-600 leading-relaxed mb-8">
@@ -74,7 +79,7 @@ const Pipeline: React.FC = () => {
       </header>
 
       {/* Filters */}
-      <section className="py-4 bg-gray-50 border-b border-gray-200 sticky top-20 z-40 shadow-sm">
+      <section className="py-4 bg-gray-50 border-b border-gray-200 sticky top-24 z-40 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 flex flex-wrap gap-4 items-center justify-between">
           <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0">
             {['All Programs', 'Oncology', 'Endocrinology'].map((f) => (
@@ -103,10 +108,10 @@ const Pipeline: React.FC = () => {
         {/* Header Row */}
         <div className="hidden md:grid grid-cols-12 gap-4 px-4 py-3 bg-gray-50 border-b border-gray-200 text-xs font-semibold uppercase tracking-widest text-gray-500">
             <div className="col-span-2 pl-8">Candidate Name</div>
-            <div className="col-span-2">Therapeutic Area</div>
             <div className="col-span-4">Potential Indications</div>
             <div className="col-span-2">Status / Stage</div>
             <div className="col-span-2">Modality</div>
+            <div className="col-span-2">Partner</div>
         </div>
 
         <div className="space-y-0">
@@ -145,6 +150,7 @@ interface PipelineRowProps {
     data: {
         id: string;
         therapeuticArea: string;
+        partner: string;
         indications: string;
         stage: number;
         modality: string;
@@ -170,7 +176,6 @@ const PipelineRow: React.FC<PipelineRowProps> = ({ data }) => {
                     </div>
                 </div>
                 
-                <div className="col-span-1 md:col-span-2 text-sm text-gray-700 font-medium">{data.therapeuticArea}</div>
                 <div className="col-span-1 md:col-span-4 text-sm text-gray-700">{data.indications}</div>
                 
                 {/* Timeline Col */}
@@ -189,6 +194,7 @@ const PipelineRow: React.FC<PipelineRowProps> = ({ data }) => {
                 </div>
 
                 <div className="col-span-1 md:col-span-2 text-sm text-gray-700">{data.modality}</div>
+                <div className="col-span-1 md:col-span-2 text-sm text-gray-700 font-medium">{data.partner}</div>
             </div>
 
             {/* Details Panel */}

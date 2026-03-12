@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
           />
           {/* Fallback Text (Hidden if image loads, handled by the error above typically, but simpler to just replace) */}
         {/* </Link> */}
-          <span className={`font-serif text-3xl font-bold tracking-tight ${isScrolled || location.pathname !== '/' ? 'text-navy-900' : 'text-navy-900'}`}>
+          <span className={`font-serif text-3xl md:text-5xl leading-tight font-bold tracking-tight ${isScrolled || location.pathname !== '/' ? 'text-navy-900' : 'text-navy-900'}`}>
             XYone Therapeutics
           </span>
         </Link>

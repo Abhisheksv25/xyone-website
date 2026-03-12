@@ -4,7 +4,7 @@ import { ArrowRight, MapPin, Mail } from 'lucide-react';
 const Contact: React.FC = () => {
   return (
     <div className="bg-background-light min-h-screen">
-      <header className="pt-20 pb-6 px-6 max-w-7xl mx-auto">
+      <header className="pt-32 pb-6 px-6 max-w-7xl mx-auto">
         <h1 className="font-serif text-5xl md:text-7xl mb-6 leading-tight max-w-4xl text-navy-900">
             Collaborate for the future of <span className="text-primary italic">precision medicine</span>.
         </h1>

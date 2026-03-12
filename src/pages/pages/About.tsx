@@ -7,7 +7,7 @@ const About: React.FC = () => {
 
   return (
     <div className="bg-background-light">
-      <header className="pt-24 pb-8 px-6 max-w-7xl mx-auto">
+      <header className="pt-32 pb-8 px-6 max-w-7xl mx-auto">
          <span className="inline-block px-3 py-1 rounded-sm bg-primary/10 text-primary text-base font-bold tracking-widest uppercase mb-6">About XYone</span>
          <h1 className="font-serif text-5xl md:text-7xl mb-8 leading-tight text-navy-900">
             Translating rigorous biology into <span className="italic text-primary">patient impact.</span>
