@@ -8,17 +8,17 @@ const About: React.FC = () => {
   return (
     <div className="bg-background-light">
       <header className="pt-32 pb-8 px-6 max-w-7xl mx-auto">
-         <span className="inline-block px-3 py-1 rounded-sm bg-primary/10 text-primary text-base font-bold tracking-widest uppercase mb-6">About XYone</span>
-         <h1 className="font-serif text-5xl md:text-7xl mb-8 leading-tight text-navy-900">
+         <span className="inline-block px-3 py-1 rounded-sm bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6">About XYone</span>
+         <h1 className="font-serif text-3xl md:text-5xl mb-6 leading-tight text-navy-900">
             Translating rigorous biology into <span className="italic text-primary">patient impact.</span>
          </h1>
          <div className="grid md:grid-cols-12 gap-12">
             <div className="md:col-span-10">
-                <p className="text-xl text-gray-600 leading-relaxed font-light mb-6 text-justify">
+                <p className="text-lg text-gray-600 leading-relaxed mb-6 text-justify">
                     Every year, approximately 1.2 million people in the U.S. are diagnosed with MUC1-positive solid tumors, including lung, ovarian, breast, gastric, and colorectal cancers. The National Cancer Institute has ranked MUC1 as the second most important cancer antigen. We are targeting MUC1-C, the permanently membrane-bound domain that acts as a central oncogenic driver across the majority of solid tumors. By focusing on this stable and functionally essential target, we are working to unlock new pathways for durable cancer therapies and more precise diagnostic solutions.
                 </p>
-                <p className="text-xl text-gray-600 leading-relaxed font-light text-justify">
-                    We have two assests entering clincial trials in 2026. Founded in 2021, XYone has transformed 20 years of research into a clinical-stage platform validated by leading institutions like Roche, Poseida Therapeutics and the National Cancer Institute (NCI)
+                <p className="text-lg text-gray-600 leading-relaxed text-justify">
+                    We have two assests entering clincial trials in 2026. Founded in 2021, XYone has transformed 20 years of research into a clinical-stage platform validated by leading institutions like Roche, Poseida Therapeutics and the National Cancer Institute (NCI).
                 </p>
             </div>
          </div>
@@ -29,14 +29,14 @@ const About: React.FC = () => {
           <div className="max-w-7xl mx-auto px-6">
               <div className="grid md:grid-cols-2 gap-16">
                   <div className="relative pl-8 border-l-2 border-primary/20">
-                       <h3 className="font-serif text-3xl text-navy-900 mb-4">Immuno-Oncology</h3>
-                       <p className="text-gray-600 leading-relaxed text-lg">
+                       <h3 className="font-serif text-2xl font-medium text-navy-900 mb-4">Immuno-Oncology</h3>
+                       <p className="text-gray-600 leading-relaxed text-base text-justify">
                            Developing precision therapeutics targeting the MUC1-C oncoprotein in solid tumors.
                        </p>
                   </div>
                   <div className="relative pl-8 border-l-2 border-primary/20">
-                       <h3 className="font-serif text-3xl text-navy-900 mb-4">Endocrinology</h3>
-                       <p className="text-gray-600 leading-relaxed text-lg">
+                       <h3 className="font-serif text-2xl font-medium text-navy-900 mb-4">Endocrinology</h3>
+                       <p className="text-gray-600 leading-relaxed text-base text-justify">
                            Creating formulations aimed at improving how hormonal imbalances are measured and treated, with a focus on personalized, programmable dosing.
                        </p>
                   </div>
@@ -47,7 +47,7 @@ const About: React.FC = () => {
       {/* Leadership Team */}
       <section className="py-12 bg-background-light">
           <div className="max-w-7xl mx-auto px-6">
-              <h2 className="font-serif text-4xl text-navy-900 mb-12 text-center">Leadership Team</h2>
+              <h2 className="font-serif text-3xl text-navy-900 mb-12 text-center">Leadership Team</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
                   {leadershipTeam.map((member, i) => (
                       <TeamMember 
@@ -66,7 +66,7 @@ const About: React.FC = () => {
       {/* Strategic & Regulatory Advisors */}
       <section className="py-12 bg-white border-t border-gray-200">
           <div className="max-w-7xl mx-auto px-6">
-              <h2 className="font-serif text-4xl text-navy-900 mb-12 text-center">Strategic & Regulatory Advisors</h2>
+              <h2 className="font-serif text-3xl text-navy-900 mb-12 text-center">Strategic & Regulatory Advisors</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
                   {strategicAdvisors.map((member, i) => (
                       <TeamMember 
@@ -121,9 +121,9 @@ const TeamMember: React.FC<{name: string, role: string, image: string, bio?: str
                 )}
             </div>
         </div>
-        <div className="p-4 text-center flex-grow flex flex-col justify-start">
-            <h3 className="font-serif text-lg font-bold text-navy-900 mb-1 leading-tight">{name}</h3>
-            <p className="text-xs font-bold uppercase tracking-widest text-primary leading-relaxed">{role}</p>
+        <div className="p-6 text-center flex-grow flex flex-col justify-start">
+            <h3 className="font-serif text-lg font-medium text-navy-900 mb-2">{name}</h3>
+            <div className="text-[10px] font-bold uppercase tracking-widest text-primary leading-tight">{role}</div>
         </div>
     </div>
 )

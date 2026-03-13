@@ -54,42 +54,32 @@ const Home: React.FC = () => {
 
             {/* Right Column - Clinical Card */}
             <div className="lg:col-span-5 relative">
-              <div className="bg-gradient-to-br from-navy-900 to-black rounded-2xl p-6 shadow-2xl border border-white/10 relative overflow-hidden">
+              <div className="bg-gradient-to-br from-navy-900 to-black rounded-2xl p-6 md:p-8 shadow-2xl border border-white/10 relative overflow-hidden">
                 {/* Top Border Gradient */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-red-400"></div>
                 
                 <div className="relative z-10">
-                    <h2 className="font-serif text-2xl md:text-3xl font-bold text-white mb-6">
+                    <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
                       Two ADC assets entering clinical trials in <span className="text-red-500">2026</span>
                     </h2>
                     
-                    <div className="space-y-4 mb-6">
+                    <div className="space-y-6 mb-10">
                       {/* Asset 1 */}
-                      <div className="relative pl-4 border-l-2 border-red-500">
-                        <div className="text-xl font-bold text-white mb-1">XYA02</div>
-                        <div className="text-[11px] font-medium text-white/60 uppercase tracking-wider">Phase 1 • Summer 2026</div>
+                      <div className="relative pl-5 border-l-2 border-red-500">
+                        <div className="text-2xl font-bold text-white mb-1.5">XYA02</div>
+                        <div className="text-xs font-medium text-white/60 uppercase tracking-wider">Phase 1 • Summer 2026</div>
                       </div>
                       
                       {/* Asset 2 */}
-                      <div className="relative pl-4 border-l-2 border-red-500/50">
-                        <div className="text-xl font-bold text-white mb-1">XYA01</div>
-                        <div className="text-[11px] font-medium text-white/60 uppercase tracking-wider">Phase 1 • Late 2026</div>
+                      <div className="relative pl-5 border-l-2 border-red-500/50">
+                        <div className="text-2xl font-bold text-white mb-1.5">XYA01</div>
+                        <div className="text-xs font-medium text-white/60 uppercase tracking-wider">Phase 1 • Late 2026</div>
                       </div>
                     </div>
                     
-                    <div className="pt-4 border-t border-white/10 mb-4">
-                      <div className="text-[10px] font-bold tracking-widest uppercase text-white/40 mb-3">Validated By</div>
-                      <div className="flex flex-wrap gap-2">
-                        <span className="px-2.5 py-1 bg-white/5 rounded-full text-[10px] font-medium text-white/80">NCI Funded</span>
-                        <span className="px-2.5 py-1 bg-white/5 rounded-full text-[10px] font-medium text-white/80">Harvard Medical</span>
-                        <span className="px-2.5 py-1 bg-white/5 rounded-full text-[10px] font-medium text-white/80">Roche</span>
-                        <span className="px-2.5 py-1 bg-white/5 rounded-full text-[10px] font-medium text-white/80">Poseida Therauputics</span>
-                      </div>
-                    </div>
-                    
-                    <Link to="/pipeline" className="flex items-center justify-center gap-3 w-full py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all backdrop-blur-sm group">
+                    <Link to="/pipeline" className="flex items-center justify-center gap-3 w-full py-4 text-lg bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all backdrop-blur-sm group">
                       View Full Pipeline
-                      <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
+                      <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
                     </Link>
                 </div>
               </div>
