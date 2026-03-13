@@ -2,6 +2,20 @@ import React from 'react';
 import { ArrowRight, MapPin, Mail } from 'lucide-react';
 
 const Contact: React.FC = () => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get('name') || '';
+    const email = formData.get('email') || '';
+    const org = formData.get('org') || '';
+    const message = formData.get('message') || '';
+
+    const subject = encodeURIComponent(`Website Inquiry from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nOrganization: ${org}\n\nMessage:\n${message}`);
+
+    window.location.href = `mailto:info@xyonetx.com?subject=${subject}&body=${body}`;
+  };
+
   return (
     <div className="bg-background-light min-h-screen">
       <header className="pt-32 pb-6 px-6 max-w-7xl mx-auto">
@@ -18,24 +32,24 @@ const Contact: React.FC = () => {
             {/* Form */}
             <div className="lg:col-span-7">
                 <h2 className="text-2xl font-serif mb-8 text-navy-900">Get in Touch</h2>
-                <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
+                <form className="space-y-8" onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div className="space-y-2">
                             <label htmlFor="name" className="text-xs font-semibold uppercase tracking-wider text-gray-500">Full Name</label>
-                            <input type="text" id="name" placeholder="Jane Doe" className="w-full bg-transparent border-0 border-b border-gray-300 focus:ring-0 focus:border-primary px-0 py-2 transition-colors placeholder:text-gray-300" />
+                            <input type="text" id="name" name="name" required placeholder="Jane Doe" className="w-full bg-transparent border-0 border-b border-gray-300 focus:ring-0 focus:border-primary px-0 py-2 transition-colors placeholder:text-gray-300" />
                         </div>
                         <div className="space-y-2">
                             <label htmlFor="email" className="text-xs font-semibold uppercase tracking-wider text-gray-500">Email Address</label>
-                            <input type="email" id="email" placeholder="jane@organization.com" className="w-full bg-transparent border-0 border-b border-gray-300 focus:ring-0 focus:border-primary px-0 py-2 transition-colors placeholder:text-gray-300" />
+                            <input type="email" id="email" name="email" required placeholder="jane@organization.com" className="w-full bg-transparent border-0 border-b border-gray-300 focus:ring-0 focus:border-primary px-0 py-2 transition-colors placeholder:text-gray-300" />
                         </div>
                     </div>
                     <div className="space-y-2">
                         <label htmlFor="org" className="text-xs font-semibold uppercase tracking-wider text-gray-500">Organization</label>
-                        <input type="text" id="org" placeholder="Research Institute or Company Name" className="w-full bg-transparent border-0 border-b border-gray-300 focus:ring-0 focus:border-primary px-0 py-2 transition-colors placeholder:text-gray-300" />
+                        <input type="text" id="org" name="org" placeholder="Research Institute or Company Name" className="w-full bg-transparent border-0 border-b border-gray-300 focus:ring-0 focus:border-primary px-0 py-2 transition-colors placeholder:text-gray-300" />
                     </div>
                     <div className="space-y-2">
                         <label htmlFor="message" className="text-xs font-semibold uppercase tracking-wider text-gray-500">Message</label>
-                        <textarea rows={4} id="message" placeholder="How can we help you?" className="w-full bg-transparent border-0 border-b border-gray-300 focus:ring-0 focus:border-primary px-0 py-2 transition-colors resize-none placeholder:text-gray-300"></textarea>
+                        <textarea rows={4} id="message" name="message" required placeholder="How can we help you?" className="w-full bg-transparent border-0 border-b border-gray-300 focus:ring-0 focus:border-primary px-0 py-2 transition-colors resize-none placeholder:text-gray-300"></textarea>
                     </div>
                     <button type="submit" className="inline-flex items-center space-x-4 bg-primary text-white px-8 py-4 rounded-sm hover:bg-red-700 transition-all group">
                         <span className="font-medium">Send Inquiry</span>
