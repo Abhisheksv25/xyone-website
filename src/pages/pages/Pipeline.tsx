@@ -33,7 +33,7 @@ const Pipeline: React.FC = () => {
         therapeuticArea: "Oncology",
         partner: "Roche",
         indications: "Multiple Solid Tumors",
-        stage: 3,
+        stage: 4,
         isPartnered: true,
         mechanism: "Allogeneic CAR-T targeting MUC1-C",
         mechanismDescription: "Allogeneic CAR-T targeting MUC1-C",
@@ -180,7 +180,7 @@ const PipelineRow: React.FC<PipelineRowProps> = ({ data }) => {
                 
                 {/* Timeline Col */}
                 <div className="col-span-1 md:col-span-2">
-                    <div className="flex gap-1 mb-1.5">
+                    <div className="flex gap-1 mb-1.5 w-4/5">
                         {[1, 2, 3, 4].map((s) => (
                             <div key={s} className={`h-1.5 flex-1 rounded-full ${s <= data.stage ? (data.isPartnered ? 'bg-gray-500' : 'bg-primary') : 'bg-gray-100'}`} />
                         ))}
@@ -188,7 +188,7 @@ const PipelineRow: React.FC<PipelineRowProps> = ({ data }) => {
                     <div className="text-[10px] font-bold uppercase tracking-widest text-gray-500">
                         {data.stage === 1 && "Discovery"}
                         {data.stage === 2 && "Filing IND Soon"}
-                        {data.stage === 3 && "Phase 1"}
+                        {data.stage === 3 && "Phase 1 (Summer 2026)"}
                         {data.stage === 4 && "Phase 2"}
                     </div>
                 </div>
