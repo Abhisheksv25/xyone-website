@@ -1,71 +1,7 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, FileText, Mic, Calendar, Download, Star } from 'lucide-react';
-
-type Category = 'All' | 'Press Release' | 'Publication' | 'Event' | 'Whitepaper';
-
-interface NewsItem {
-  id: number;
-  date: string;
-  category: Exclude<Category, 'All'>;
-  title: string;
-  source?: string;
-  link: string;
-  summary?: string;
-}
-
-const newsData: NewsItem[] = [
-  {
-    id: 6,
-    date: 'May, 2025',
-    category: 'Press Release',
-    title: 'XYA02 awarded the Orphan Drug Designation by FDA',
-    link: '#',
-    summary: 'The U.S. Food and Drug Administration (FDA) has granted Orphan Drug Designation to XYA02 for the treatment of pancreatic cancers.'
-  },
-  {
-    id: 8,
-    date: 'July 02, 2025',
-    category: 'Publication',
-    title: 'Mucin-1: a promising pan-cancer therapeutic target',
-    source: 'npj Precision Oncology',
-    link: 'https://www.nature.com/articles/s41698-025-01016-2',
-    summary: "A comprehensive review in Nature Partner Journals highlighting Mucin-1 (MUC1) as a high-value target for pan-cancer therapy, reinforcing the scientific rationale behind XYone's MUC1-C-focused platform."
-  },
-  {
-    id: 3,
-    date: 'Feb 27, 2024',
-    category: 'Press Release',
-    title: 'Antibody-drug conjugate targeting MUC1-C',
-    source: 'Frederick National Lab',
-    link: 'https://frederick.cancer.gov/news/biopharmaceutical-development-program-embarks-new-work-targeted-cancer',
-    summary: 'Research highlighting the development of a novel antibody-drug conjugate targeting the MUC1-C oncoprotein.'
-  },
-  {
-    id: 1,
-    date: 'October 1, 2022',
-    category: 'Press Release',
-    title: 'XYone Awarded $2.5M for Androgen Dysregulation Research',
-    link: '#',
-    summary: 'XYone announced the award of two NIA/SBIR grants totaling over $2.5 million to advance studies in androgen dysregulation.'
-  },
-  {
-    id: 7,
-    date: 'November 26, 2024',
-    category: 'Press Release',
-    title: 'Roche inks $1.5B Poseida buyout to land off-the-shelf CAR-Ts',
-    source: 'Fierce Biotech',
-    link: 'https://www.fiercebiotech.com/biotech/roche-inks-15b-poseida-buyout-betting-shelf-car-ts-will-democratize-access-cell-therapies',
-    summary: 'Roche acquired Poseida Therapeutics, including the out-licensed P-MUC1C-ALLO1 program, validating the potential of allogeneic CAR-T therapies targeting MUC1-C.'
-  },
-  {
-    id: 2,
-    date: 'April 1, 2022',
-    category: 'Press Release',
-    title: 'XYone Congratulates Poseida on Phase 1 CAR-T Cell Trial',
-    link: '#',
-    summary: 'XYone congratulated Poseida Therapeutics on the start of its Phase 1 study of P-MUC1C-ALLO1 allogeneic CAR-T cells.'
-  }
-];
+import { Link } from 'react-router-dom';
+import { ArrowRight, ArrowUpRight, FileText, Mic, Calendar, Download, Star } from 'lucide-react';
+import { newsData, Category } from '../../data/data/newsData';
 
 const News: React.FC = () => {
   const [filter, setFilter] = useState<Category>('All');
@@ -156,25 +92,31 @@ const News: React.FC = () => {
                     </div>
                     <div className="md:col-span-8">
                     <h2 className={`text-xl font-serif font-medium text-navy-900 mb-3 leading-tight ${item.link !== '#' ? 'group-hover:text-primary transition-colors cursor-pointer' : ''}`}>
-                        {item.link !== '#' ? (
-                            <a href={item.link} target="_blank" rel="noopener noreferrer">{item.title}</a>
+                        {item.slug ? (
+                          <Link to={`/news/${item.slug}`}>{item.title}</Link>
+                        ) : item.link && item.link !== '#' ? (
+                          <a href={item.link} target="_blank" rel="noopener noreferrer">{item.title}</a>
                         ) : (
-                            item.title
+                          item.title
                         )}
                     </h2>
                     {item.source && (
                         <div className="text-sm text-gray-800 font-bold mb-2">Published in {item.source}</div>
                     )}
                     {item.summary && (
-                        <p className="text-gray-500 text-sm leading-relaxed max-w-2xl">{item.summary}</p>
+                        <p className="text-gray-600 text-base leading-relaxed max-w-2xl">{item.summary}</p>
                     )}
                     </div>
                     <div className="md:col-span-1 flex justify-end">
-                    {item.link !== '#' && (
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-primary group-hover:text-white transition-all">
-                            <ArrowUpRight size={20} />
-                        </a>
-                    )}
+                      {item.slug ? (
+                          <Link to={`/news/${item.slug}`} className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-primary group-hover:text-white transition-all">
+                              <ArrowRight size={20} />
+                          </Link>
+                      ) : item.link && item.link !== '#' ? (
+                          <a href={item.link} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-primary group-hover:text-white transition-all">
+                              <ArrowUpRight size={20} />
+                          </a>
+                      ) : null}
                     </div>
                 </div>
                 </article>

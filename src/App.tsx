@@ -8,6 +8,7 @@ import Science from './pages/pages/Science';
 import Pipeline from './pages/pages/Pipeline';
 import Contact from './pages/pages/Contact';
 import News from './pages/pages/News';
+import PressReleaseDetail from './pages/pages/PressReleaseDetail';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -30,6 +31,7 @@ const App: React.FC = () => {
             <Route path="/science" element={<Science />} />
             <Route path="/pipeline" element={<Pipeline />} />
             <Route path="/news" element={<News />} />
+            <Route path="/news/:slug" element={<PressReleaseDetail />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
