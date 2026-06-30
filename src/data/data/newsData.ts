@@ -54,19 +54,19 @@ export const newsData: NewsItem[] = [
     id: 6,
     date: 'May, 2025',
     category: 'Press Release',
-    title: 'XYA02 awarded the Orphan Drug Designation by FDA',
+    title: 'XYA02 Receives FDA Orphan Drug Designation for Pancreatic Cancer',
     link: '#',
     summary: 'The U.S. Food and Drug Administration (FDA) has granted Orphan Drug Designation to XYA02 for the treatment of pancreatic cancers.'
   },
-  {
-    id: 8,
-    date: 'July 02, 2025',
-    category: 'Publication',
-    title: 'Mucin-1: a promising pan-cancer therapeutic target',
-    source: 'npj Precision Oncology',
-    link: 'https://www.nature.com/articles/s41698-025-01016-2',
-    summary: "A comprehensive review in Nature Partner Journals highlighting Mucin-1 (MUC1) as a high-value target for pan-cancer therapy, reinforcing the scientific rationale behind XYone's MUC1-C-focused platform."
-  },
+  // {
+  //   id: 8,
+  //   date: 'July 02, 2025',
+  //   category: 'Publication',
+  //   title: 'Mucin-1: a promising pan-cancer therapeutic target',
+  //   source: 'npj Precision Oncology',
+  //   link: 'https://www.nature.com/articles/s41698-025-01016-2',
+  //   summary: "A comprehensive review in Nature Partner Journals highlighting Mucin-1 (MUC1) as a high-value target for pan-cancer therapy, reinforcing the scientific rationale behind XYone's MUC1-C-focused platform."
+  // },
   {
     id: 3,
     date: 'Feb 27, 2024',

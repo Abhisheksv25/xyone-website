@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { ArrowRight, Activity, Dna, FileText, Target, Zap, ChevronDown, Linkedin } from 'lucide-react';
+import { ArrowRight, Activity, Dna, FileText, Target, Zap, ChevronDown, Linkedin, Mic } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { leadership } from '../../data/data/team';
+import { newsData } from '../../data/data/newsData';
 
 const Home: React.FC = () => {
   const pipelineData = [
@@ -26,6 +27,10 @@ const Home: React.FC = () => {
       detailsDescription: "Phase 1 initiating late 2026. Pre-IND package submitted Jan 2026. Complete tumor suppression shown in breast and lung cancer models."
     },
   ];
+
+  const sortedNews = [...newsData]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 3);
 
   return (
     <div className="bg-background-light">
@@ -240,12 +245,66 @@ const Home: React.FC = () => {
           </div>
       </section>
 
-      {/* Latest News & Publications */}
+      {/* Latest News */}
       <section className="py-12 bg-gray-50 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-end mb-8">
              <div>
-                <h2 className="font-serif text-3xl text-navy-900 mb-2">Publications</h2>
+                <h2 className="font-serif text-3xl text-navy-900 mb-2">Latest News</h2>
+                <p className="text-gray-500">Company updates, press releases, and events.</p>
+             </div>
+             <Link to="/news" className="hidden md:inline-flex items-center text-primary text-sm font-bold uppercase tracking-widest hover:underline">
+                View All News <ArrowRight size={14} className="ml-2"/>
+             </Link>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {sortedNews.map(item => (
+              <div key={item.id} className="group bg-white rounded-lg overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col h-full">
+                <div className="p-8 flex flex-col flex-grow">
+                   <div className="flex items-center gap-2 mb-4">
+                      {item.category === 'Press Release' ? <Mic size={16} className="text-primary" /> : <FileText size={16} className="text-primary" />}
+                      <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">{item.date}</span>
+                   </div>
+                   <h3 className="font-serif text-xl font-medium text-navy-900 mb-4 leading-tight">
+                     {item.title}
+                   </h3>
+                   {item.summary && (
+                      <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                        {item.summary}
+                      </p>
+                   )}
+                   
+                   {(item.slug || (item.link && item.link !== '#')) && (
+                      <div className="mt-auto pt-4">
+                        {item.slug ? (
+                          <Link to={`/news/${item.slug}`} className="text-navy-900 text-sm font-bold flex items-center group/link hover:text-primary transition-colors">
+                            Read More <ArrowRight size={14} className="ml-2 group-hover/link:translate-x-1 transition-transform"/>
+                          </Link>
+                        ) : (
+                          <a href={item.link!} target="_blank" rel="noopener noreferrer" className="text-navy-900 text-sm font-bold flex items-center group/link hover:text-primary transition-colors">
+                            Read More <ArrowRight size={14} className="ml-2 group-hover/link:translate-x-1 transition-transform"/>
+                          </a>
+                        )}
+                      </div>
+                   )}
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-8 md:hidden text-center">
+             <Link to="/news" className="text-primary text-sm font-bold uppercase tracking-widest">View All News</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Publications */}
+      <section className="py-12 bg-white border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex justify-between items-end mb-8">
+             <div>
+                <h2 className="font-serif text-3xl text-navy-900 mb-2">Key Publications</h2>
                 <p className="text-gray-500">Key research validating our approach.</p>
              </div>
              <Link to="/news" className="hidden md:inline-flex items-center text-primary text-sm font-bold uppercase tracking-widest hover:underline">
