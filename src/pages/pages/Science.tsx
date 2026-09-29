@@ -116,7 +116,7 @@ const Science: React.FC = () => {
             <AssetCard 
                 title="XYA02" 
                 subtitle="Exatecan (Topo1) ADC"
-                description="Phase 1 initiating Summer 2026. Targeting Non-squamous NSCLC, High-grade serous ovarian, Gastric/GEJ, and Colorectal cancer."
+                description="Phase 1b/2a trials underway. Targeting Non-squamous NSCLC, High-grade serous ovarian, Gastric/GEJ, and Colorectal cancer."
                 tags={['DAR 4', 'Beta-glucuronide Linker']}
                 features={[
                     "Dramatic sustained efficacy in multiple tumor types",

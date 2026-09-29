@@ -14,7 +14,7 @@ const Pipeline: React.FC = () => {
         stage: 3, // 1: Pre-Clinical, 2: IND-Enabling, 3: Phase 1, 4: Phase 2
         mechanism: "Next-gen ADC targeting MUC1-C with Exatecan payload (DAR 4)",
         mechanismDescription: "MUC1-C–directed ADC with Exatecan payload (DAR 4; Beta-glucuronide linker). Selectively delivers a Topoisomerase I inhibitor to MUC1-C-expressing tumor cells.",
-        detailsDescription: "Phase 1 initiating Summer 2026. Targeting Non-squamous NSCLC, High-grade serous ovarian, Gastric/GEJ, and Colorectal cancer. Head-to-head superiority demonstrated vs MUC1-N comparator in PDX studies."
+        detailsDescription: "Phase 1b/2a trails underway. Targeting Non-squamous NSCLC, High-grade serous ovarian, Gastric/GEJ, and Colorectal cancer. Head-to-head superiority demonstrated vs MUC1-N comparator in PDX studies."
       },
       {
         id: "XYA01",
@@ -188,7 +188,7 @@ const PipelineRow: React.FC<PipelineRowProps> = ({ data }) => {
                     <div className="text-[10px] font-bold uppercase tracking-widest text-gray-500">
                         {data.stage === 1 && "Discovery"}
                         {data.stage === 2 && "Filing IND Soon"}
-                        {data.stage === 3 && "Phase 1 (Summer 2026)"}
+                        {data.stage === 3 && "Phase 1b/2a trials underway"}
                         {data.stage === 4 && "Phase 2"}
                     </div>
                 </div>
