@@ -24,6 +24,32 @@ export interface NewsItem {
 
 export const newsData: NewsItem[] = [
   {
+    id: 10,
+    date: 'September 25, 2026',
+    category: 'Press Release',
+    title: 'XYone Therapeutics Announces First Patient Dosed in First-in-Human Clinical Trial of XYA02 (AT2021), a Novel Antibody Drug Conjugate Targeting MUC1-C',
+    slug: 'xya02-first-patient-dosed',
+    summary: 'XYone Therapeutics announced the first patient dosing in its first-in-human Phase 1b/2 trial of XYA02 (AT2021), its lead MUC1-C–targeted antibody-drug conjugate.',
+    location: 'CANTON, Mass. — September 25, 2026',
+    body: [
+      { type: 'paragraph', content: 'XYone Therapeutics, Inc. (“XYone”), a clinical-stage biotechnology company, announced that the first patient has been dosed in the first-in-human Phase 1b/2 clinical trial of XYA02 (also known as AT2021), the Company’s lead antibody-drug conjugate (“ADC”) targeting MUC1-C.' },
+      { type: 'paragraph', content: 'The multicenter, open-label study is evaluating XYA02 in patients with advanced, relapsed and/or refractory solid tumors. The study is designed to characterize the safety and tolerability of XYA02, identify appropriate dose levels for further clinical development, and assess pharmacokinetics, pharmacodynamics and preliminary antitumor activity. The study is registered on ClinicalTrials.gov as NCT07670312, “Evaluation of XYA02 in Patients with Advanced Solid Tumors.”' },
+      { type: 'quote', content: 'Dosing the first patient with XYA02 represents the culmination of several years of work to develop a differentiated therapeutic approach against MUC1-C. This marks a significant milestone in XYone’s transition to a clinical stage company.', author: 'Anshu Goyal', title: 'Chief Executive Officer and Co-Founder of XYone Therapeutics' },
+      { type: 'paragraph', content: 'The clinical study includes patients with advanced solid tumors in non-small cell lung, ovarian, gastric/GEJ & colorectal cancers. The study will initially assess escalating doses of XYA02, followed by further evaluation in selected tumor types based on emerging safety, pharmacokinetic, biomarker and antitumor activity data.' },
+      { type: 'paragraph', content: '“MUC1 has been recognized as an important pan-cancer target for decades, but the biology of targeting the specific domain (MUC1-C) addresses several vexing issues,” said Dr. Ravi Jasuja, Co-Founder and Chief Scientific Officer of XYone Therapeutics. “MUC1-C is expressed across multiple solid tumors and, unlike the shed extracellular MUC1-N domain, remains tumor anchored. Compared to MUC1-C, heterogeneous glycosylation of MUC1-N further compounds the complexity in therapeutic targeting of the extracellular domain. Accordingly, MUC1-C targeting with an antibody-drug conjugate provides a compelling rationale for an improved therapeutic index.”' },
+      { type: 'quote', content: 'We are excited that the U.S. Food and Drug Administration has granted XYA02 Orphan Drug Designation (ODD) for the treatment of both pancreatic cancer and gastric cancer, with additional applications pending in other indications. These designations recognize the potential of XYA02 to treat patients with these difficult-to-treat solid tumors.', author: 'Dr. Surender Kharbanda', title: 'Chief Operating Officer of XYone Therapeutics' },
+    ],
+    about: [
+      { title: 'About XYA02', content: 'XYA02 is a novel MUC1-C targeting ADC for the treatment of multiple solid tumors. It was engineered with a novel, proprietary antibody conjugated with Exatecan payload. XYA02 is an investigational drug and has not been approved by the U.S. Food and Drug Administration, the Australian Therapeutic Goods Administration, or any other regulatory authority. Its safety and efficacy have not been established.' },
+      { title: 'About XYone Therapeutics', content: 'XYone Therapeutics, Inc. is a clinical-stage biotechnology company, based in greater Boston, MA with innovative programs in oncology and endocrinology. XYone’s pipeline includes multiple antibody-drug conjugates, T-cell engagers (TCEs) and other MUC1-C–directed therapeutic modalities. For more information, visit XYone Therapeutics’ website: www.xyonetx.com' },
+    ],
+    contacts: {
+      title: 'Media and Investor Contact',
+      email: 'info@xyonetx.com',
+      web: 'www.xyonetx.com'
+    }
+  },
+  {
     id: 9,
     date: 'June 25, 2026',
     category: 'Press Release',
@@ -54,7 +80,7 @@ export const newsData: NewsItem[] = [
     id: 6,
     date: 'May, 2025',
     category: 'Press Release',
-    title: 'XYA02 Receives FDA Orphan Drug Designation for Pancreatic Cancer',
+    title: 'XYA02 Receives FDA Orphan Drug Designation for Pancreatic Cance',
     link: '#',
     summary: 'The U.S. Food and Drug Administration (FDA) has granted Orphan Drug Designation to XYA02 for the treatment of pancreatic cancers.'
   },

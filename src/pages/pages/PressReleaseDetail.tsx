@@ -35,11 +35,11 @@ const PressReleaseDetail: React.FC = () => {
         </div>
 
         <div className="prose prose-lg max-w-none text-gray-700">
-          {article.location && <p className="lead text-gray-500 font-semibold">{article.location}</p>}
+          {article.location && <p className="lead text-gray-500 font-semibold mb-6">{article.location}</p>}
           
           {article.body?.map((section, index) => {
             if (section.type === 'paragraph') {
-              return <p key={index}>{section.content}</p>;
+              return <p key={index} className="mb-6 leading-relaxed">{section.content}</p>;
             }
             if (section.type === 'quote') {
               return (
@@ -62,7 +62,7 @@ const PressReleaseDetail: React.FC = () => {
           {article.about?.map((section, index) => (
             <div key={index}>
               <h3 className="font-serif text-2xl text-navy-900 mt-12 mb-4">{section.title}</h3>
-              <p>{section.content}</p>
+              <p className="mb-6 leading-relaxed">{section.content}</p>
             </div>
           ))}
 

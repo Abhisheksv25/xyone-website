@@ -93,7 +93,7 @@ const News: React.FC = () => {
                     <div className="md:col-span-8">
                     <h2 className={`text-xl font-serif font-medium text-navy-900 mb-3 leading-tight ${item.link !== '#' ? 'group-hover:text-primary transition-colors cursor-pointer' : ''}`}>
                         {item.slug ? (
-                          <Link to={`/news/${item.slug}`}>{item.title}</Link>
+                          <Link to={`/news/${item.slug}`} target="_blank" rel="noopener noreferrer">{item.title}</Link>
                         ) : item.link && item.link !== '#' ? (
                           <a href={item.link} target="_blank" rel="noopener noreferrer">{item.title}</a>
                         ) : (
@@ -109,7 +109,7 @@ const News: React.FC = () => {
                     </div>
                     <div className="md:col-span-1 flex justify-end">
                       {item.slug ? (
-                          <Link to={`/news/${item.slug}`} className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-primary group-hover:text-white transition-all">
+                          <Link to={`/news/${item.slug}`} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-primary group-hover:text-white transition-all">
                               <ArrowRight size={20} />
                           </Link>
                       ) : item.link && item.link !== '#' ? (
